@@ -1,95 +1,59 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Nav from "./component/Nav"
+import Image from "next/image";
+import menu from './asset/menu.svg'
+import ETH from './asset/ETH.svg';
+import arrow from './asset/arrow.svg';
+import convert from './asset/convert.svg';
+import AST from './asset/AST.svg'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
+    <>
+    <Nav />
+    <div className="main">
+      <div className="container">
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <div className="tab-flex">
+            <div className="swap-text">Swap</div>
+            <Image src={menu} alt="menu-icon" className="menu-icon" />
+          </div>
+          <div className="first-token">
+            <div>
+              <div className="token">0.153</div>
+              <div className="token_equivalent">$220.07</div>
+            </div>
+            <button className="first-token-btn">
+              <Image src={ETH} alt="ETH" className="ETH"/>
+              <div className="eth-text">ETH</div>
+              <Image src={arrow} alt="arrow" className="arrow" />
+            </button>
+          </div>
+          <div className="break-flex">
+            <div className="first-line"></div>
+            <Image src={convert} alt="convert" className="convert" />
+            <div className="sec-line"></div>
+          </div>
+          <div className="first-token">
+          <div>
+              <div className="token">22,000</div>
+              <div className="token_equivalent">$238.07</div>
+            </div>
+            <button className="first-token-btn">
+              <Image src={AST} alt="ETH" className="ETH"/>
+              <div className="eth-text">AST</div>
+              <Image src={arrow} alt="arrow" className="arrow" />
+            </button>
+          </div>
+          <button className='swap-connect-btn'>Connect Wallet</button>
+          <div className="estimate-group">
+            <div className="estim">
+            <div className="estimate-flex">
+            </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
+    </>
   )
 }

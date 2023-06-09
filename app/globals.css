@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'Proxima Nova';
 }
 
 body {
@@ -93,6 +94,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: 'Proxima Nova';
+    background: none;
 }
 
 a {
@@ -104,4 +107,137 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  margin-top: 40px;
+}
+.connect-btn {
+border: 1px solid #E3E3E3;
+border-radius: 16.5px;
+width: 119px;
+height: 39px;
+margin-top: 51px;
+background: none;
+}
+.connect-btn:hover {
+  border: 1px solid #26489E;
+  background: #26489E;
+}
+.main {
+  display: flex;
+justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  font-family: 'Proxima Nova';
+  /* background: #1E1E1E; */
+}
+.container {
+  width: 287px;
+/* height: 30px; */
+background: rgba(45, 44, 44, 0.3);
+border-radius: 10px;
+}
+.tab-flex {
+display: flex;
+justify-content: space-between;
+margin-left: 25.5px;
+}
+.swap-text {
+  margin: 26.5px 0 36.5px 0;
+  font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+} 
+.menu-icon {
+  margin: 24px 27.5px 0 0;
+}
+.first-token {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24px;
+}
+.token{
+  font-family: 'Proxima Nova';
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+}
+.token_equivalent {
+  font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+color: #B8B8B8;
+margin-top: 2px;
+}
+.first-token-btn {
+  border: 1px solid #ECECEC;
+filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+border-radius: 17px;
+display: flex;
+width: 103px;
+margin: 0 23px 0 0;
+background: none;
+}
+.ETH {
+  margin: 7px 5px 6px 13px;
+}
+.eth-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 6px 12.43px 0 0;
+}
+.arrow {
+  margin-top: 11.95px;
+}
+.break-flex {
+  display: flex;
+}
+.first-line {
+  width: 112px;
+  margin: 36px 2px 36px 20px;
+  height: 0;
+  color: #FFFFFF;
+border: 1px solid rgba(255, 255, 255, 0.46);
+}
+.convert {
+margin: 25px 2px 0 0;
+}
+.sec-line {
+  width: 112px;
+  margin: 36px 0px 0 0px;
+  height: 0;
+  color: #FFFFFF;
+border: 1px solid rgba(255, 255, 255, 0.46);
+}
+.swap-connect-btn {
+  width: 248px;
+height: 51px;
+border: 1px solid #26489E;
+background: #26569E;
+box-shadow: 0px 8px 16px rgba(12, 77, 174, 0.3);
+border-radius: 10px;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+margin:31px 0 30px 20px ;
+}
+.estimate-group {
+  border: 1px solid #FFFFFF;
+border-radius: 10px;
+margin-left: 22px;
+}
+.estim {
+  margin: 24px 0 0 23px;
+}
+.estimate-flex {
+  display: flex;
 }

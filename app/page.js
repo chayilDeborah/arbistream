@@ -6,7 +6,8 @@ import arrow from "./asset/arrow.svg";
 import convert from "./asset/convert.svg";
 import AST from "./asset/AST.svg";
 import equiv from './asset/equiv.svg'
-import notice from './asset/notice.svg'
+import notice from './asset/notice.svg';
+import tick from './asset/tick.svg'
 
 export default function Home() {
   return (
@@ -46,7 +47,7 @@ export default function Home() {
                 <Image src={arrow} alt="arrow" className="arrow" />
               </button>
             </div>
-            <button className="swap-connect-btn">Connect Wallet</button>
+            <button className="swap-connect-btn">Swap</button>
             <div className="estimate-group">
               <div className="estim">
                 <div className="estimate-flex">
@@ -66,9 +67,17 @@ export default function Home() {
                   <div className="estim-text-flex">
                     <div className="save">You Save</div>
                     <Image src={notice} alt="note" className="note" />
-
                   </div>
-
+                  <div className="estim-no">
+                    <Image src={tick} alt="icon" className='tick' />
+                    <div className="estim-num">$5.08</div>
+                  </div>
+                </div>
+                <div className="estimate-flex1" id="estim-id">
+                  <div className="estim-text">Minimum Received</div>
+                  <div className="estim-no">
+                    <div className="estim-num">22,000 AST</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,3 +87,5 @@ export default function Home() {
     </>
   );
 }
+
+

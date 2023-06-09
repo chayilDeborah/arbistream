@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -77,6 +79,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+                                                
 }
 
 html,
@@ -94,7 +98,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', sans-serif;
+                                                
     background: none;
 }
 
@@ -123,10 +128,12 @@ width: 119px;
 height: 39px;
 margin-top: 51px;
 background: none;
+cursor: pointer;
 }
 .connect-btn:hover {
   border: 1px solid #26489E;
   background: #26489E;
+  box-shadow: 0px 8px 16px rgba(12, 77, 174, 0.3);
 }
 .main {
   display: flex;
@@ -192,7 +199,7 @@ background: none;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-  margin: 6px 12.43px 0 0;
+  margin: 9px 12.43px 0 0;
 }
 .arrow {
   margin-top: 11.95px;
@@ -229,6 +236,11 @@ font-size: 16px;
 line-height: 19px;
 color: #FFFFFF;
 margin:31px 0 30px 20px ;
+cursor: pointer;
+}
+.swap-connect-btn:hover {
+  border: 1px solid #224396;
+  background: #224396;
 }
 .estimate-group {
   border: 1px solid #FFFFFF;
@@ -240,4 +252,34 @@ margin-left: 22px;
 }
 .estimate-flex {
   display: flex;
+  justify-content: space-between;
+}
+.estim-text {
+  font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+}
+.estim-no {
+  display: flex;
+  margin-right: 26px;
+}
+.equiv {
+  margin: 8px 5.67px 0 0;
+}
+.estim-num {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+#estim-id {
+  margin-top: 23px;
+}
+.estim-text-flex {
+  display: flex;
+}
+.save {
+  font-weight: 400;
+font-size: 12px;
+line-height: 15px;
 }

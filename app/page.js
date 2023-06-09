@@ -6,7 +6,7 @@ import arrow from "./asset/arrow.svg";
 import convert from "./asset/convert.svg";
 import AST from "./asset/AST.svg";
 import equiv from './asset/equiv.svg'
-
+import notice from './asset/notice.svg'
 
 export default function Home() {
   return (
@@ -65,7 +65,7 @@ export default function Home() {
                 <div className="estimate-flex" id="estim-id">
                   <div className="estim-text-flex">
                     <div className="save">You Save</div>
-                    
+                    <Image src={notice} alt="note" className="note" />
 
                   </div>
 

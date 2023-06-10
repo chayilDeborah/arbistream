@@ -131,7 +131,9 @@ export default function Home() {
                 )}
               />
             </div>
+            <div className="swap-btn-flex">
             <button className="swap-connect-btn">Swap</button>
+            </div>
             <div className="estimate-group">
               <div className="estim">
                 <div className="estimate-flex">

@@ -36,7 +36,7 @@ justify-content: center;
  
 }
 .container {
-  width: 287px;
+  width: 318px;
 /* height: 30px; */
 background: rgba(45, 44, 44, 0.3);
 border-radius: 10px;
@@ -130,17 +130,21 @@ font-weight: 700;
 font-size: 16px;
 line-height: 19px;
 color: #FFFFFF;
-margin:31px 0 30px 20px ;
+margin:31px 0 30px 0 ;
 cursor: pointer;
 }
 .swap-connect-btn:hover {
   border: 1px solid #224396;
   background: #224396;
 }
+.swap-btn-flex {
+  display: flex;
+  justify-content: center;
+}
 .estimate-group {
   border: 1px solid #FFFFFF;
 border-radius: 10px;
-margin: 0 21px 22px 22px;
+margin: 0 14px 32px 14px;
 }
 .estim {
   margin: 24px 0 0 23px;

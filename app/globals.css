@@ -36,7 +36,7 @@ justify-content: center;
  
 }
 .container {
-  width: 330px;
+  width: 320px;
 /* height: 30px; */
 background: rgba(45, 44, 44, 0.3);
 border-radius: 10px;
@@ -46,7 +46,7 @@ justify-content: center;
 .tab-flex {
 display: flex;
 justify-content: space-between;
-margin-left: 25.5px;
+margin-left: 10.5px;
 }
 .swap-text {
   margin: 26.5px 0 36.5px 0;
@@ -63,7 +63,7 @@ line-height: 17px;
 .first-token {
   display: flex;
   justify-content: space-between;
-  margin-left: 24px;
+  margin-left: 15px;
 }
 .token{
   font-family: 'Proxima Nova';
@@ -212,4 +212,13 @@ line-height: 15px;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
+
+}
+
+@media (min-width: 320px) and (max-width: 450px)  {
+  .container{
+    /* width: 100%;
+max-width: 440px; */
+flex-shrink: 0;
+  }
 }

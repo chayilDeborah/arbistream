@@ -120,6 +120,8 @@ a {
 }
 .logo {
   margin-top: 40px;
+  width: 147px;
+  height: 82px;
 }
 .connect-btn {
 border: 1px solid #E3E3E3;
@@ -294,4 +296,19 @@ line-height: 15px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+}
+#select-id {
+  margin: 0 23px 0 0;
+}
+#selectdiv-id {
+  background-color: transparent;
+}
+.input {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Proxima Nova';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
 }

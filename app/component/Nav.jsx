@@ -1,11 +1,11 @@
 import Image from "next/image"
-import navlogo from '../asset/navlogo.svg'
+import navicon from '../asset/navicon.png'
 
 const Nav = () => {
   return (
     <>
     <div className="nav-wrap">
-        <Image src={navlogo} alt="Arbistream-logo" className="logo"/>
+        <Image src={navicon} alt="Arbistream-logo" className="logo"/>
         <button className="connect-btn">Connect Wallet</button>
     </div>
     </>

@@ -1,3 +1,6 @@
+"use client";
+import React, { useState } from "react";
+import Select from "react-select";
 import Nav from "./component/Nav";
 import Image from "next/image";
 import menu from "./asset/menu.svg";
@@ -5,11 +8,71 @@ import ETH from "./asset/ETH.svg";
 import arrow from "./asset/arrow.svg";
 import convert from "./asset/convert.svg";
 import AST from "./asset/AST.svg";
-import equiv from './asset/equiv.svg'
-import notice from './asset/notice.svg';
-import tick from './asset/tick.svg'
+import equiv from "./asset/equiv.svg";
+import notice from "./asset/notice.svg";
+import tick from "./asset/tick.svg";
 
 export default function Home() {
+
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "none",
+      borderRadius: "17px",
+      // Overwrittes the different states of border
+      borderColor: state.isFocused ? "#ECECEC" : "#ececec",
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      "&:hover": {
+        // Overwrittes the different states of border
+        borderColor: state.isFocused ? "#26489E" : "#26489E",
+        
+      }
+    }),
+    indicatorSeparator: (base) => ({
+      ...base,
+      display: "none"
+    }),
+    placeholder: (base) => ({
+      ...base,
+      placeholder: "Select Token"
+    }),
+    indicatorsContainer: (base) => ({
+      ...base,
+      color: "#D5D5D6"
+    }),
+    menu: (base) => ({
+      ...base,
+      background: "#2d2c2c94"
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: "#FFFFFF",
+      fontWeight: 700,
+      fontSize: "14px",
+      lineHeight: "17px"
+    })
+  };
+
+  const data = [
+    {
+      value: 1,
+      token: "ETH",
+      icon: "https://res.cloudinary.com/dmye53wps/image/upload/v1686398570/ETH_ndf4du.svg",
+    },
+    {
+      value: 2,
+      token: "AST",
+      icon: "https://res.cloudinary.com/dmye53wps/image/upload/v1686394877/AST_qd9pml.svg",
+    },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  // handle onChange event of the dropdown
+  const handleChange = (e) => {
+    setSelectedOption(e);
+  };
   return (
     <>
       <Nav />
@@ -22,14 +85,23 @@ export default function Home() {
             </div>
             <div className="first-token">
               <div>
-                <div className="token">0.153</div>
+                <input className="input"/>
                 <div className="token_equivalent">$220.07</div>
               </div>
-              <button className="first-token-btn">
-                <Image src={ETH} alt="ETH" className="ETH" />
-                <div className="eth-text">ETH</div>
-                <Image src={arrow} alt="arrow" className="arrow" />
-              </button>
+    
+              <Select
+              id='select-id'
+                styles={customStyles}
+                value={selectedOption}
+                options={data}
+                onChange={handleChange}
+                getOptionLabel={(e) => (
+                  <div style={{ display: "flex", alignItems: "center" }} id="selectdiv-id">
+                    <Image src={e.icon} width={20} height={20} />
+                    <span style={{ marginLeft: 5 }}>{e.token}</span>
+                  </div>
+                )}
+              />
             </div>
             <div className="break-flex">
               <div className="first-line"></div>
@@ -38,14 +110,25 @@ export default function Home() {
             </div>
             <div className="first-token">
               <div>
-                <div className="token">22,000</div>
+              <input className="input"/>
                 <div className="token_equivalent">$238.07</div>
               </div>
-              <button className="first-token-btn">
-                <Image src={AST} alt="ETH" className="ETH" />
-                <div className="eth-text">AST</div>
-                <Image src={arrow} alt="arrow" className="arrow" />
-              </button>
+              <Select
+                id="select-id"
+                styles={customStyles}
+                value={selectedOption}
+                options={data}
+                onChange={handleChange}
+                getOptionLabel={(e) => (
+                  <div
+                    style={{ display: "flex", alignItems: "center" }}
+                    id="selectdiv-id"
+                  >
+                    <Image src={e.icon} width={20} height={20} />
+                    <span style={{ marginLeft: 5 }}>{e.token}</span>
+                  </div>
+                )}
+              />
             </div>
             <button className="swap-connect-btn">Swap</button>
             <div className="estimate-group">
@@ -53,7 +136,7 @@ export default function Home() {
                 <div className="estimate-flex">
                   <div className="estim-text">Estimated Cost</div>
                   <div className="estim-no">
-                    <Image src={equiv} alt="icon" className='equiv' />
+                    <Image src={equiv} alt="icon" className="equiv" />
                     <div className="estim-num">$5.08</div>
                   </div>
                 </div>
@@ -69,7 +152,7 @@ export default function Home() {
                     <Image src={notice} alt="note" className="note" />
                   </div>
                   <div className="estim-no">
-                    <Image src={tick} alt="icon" className='tick' />
+                    <Image src={tick} alt="icon" className="tick" />
                     <div className="estim-num">$5.08</div>
                   </div>
                 </div>
@@ -87,5 +170,3 @@ export default function Home() {
     </>
   );
 }
-
-

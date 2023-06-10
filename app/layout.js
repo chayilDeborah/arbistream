@@ -2,8 +2,8 @@ import './globals.css'
 
 
 export const metadata = {
-  title: 'Arbistream',
-  description: 'Arbistream',
+  title: 'Astrava',
+  description: 'Astrava',
 }
 
 export default function RootLayout({ children }) {

@@ -304,6 +304,7 @@ line-height: 15px;
   background-color: transparent;
 }
 .input {
+  width: 30px;
   border: none;
   outline: none;
   background: none;

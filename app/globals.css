@@ -104,7 +104,7 @@ background: none;
   justify-content: center;
 }
 .first-line {
-  width: 112px;
+  width: 125px;
   margin: 36px 2px 36px 0px;
   height: 0;
   color: #FFFFFF;
@@ -114,14 +114,14 @@ border: 1px solid rgba(255, 255, 255, 0.46);
 margin: 25px 2px 0 0;
 }
 .sec-line {
-  width: 112px;
+  width: 125px;
   margin: 36px 0px 0 0px;
   height: 0;
   color: #FFFFFF;
 border: 1px solid rgba(255, 255, 255, 0.46);
 }
 .swap-connect-btn {
-  width: 248px;
+  width: 290px;
 height: 51px;
 border: 1px solid #26489E;
 background: #26569E;

@@ -65,10 +65,14 @@ export default function Home() {
   ];
 
   const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption2, setSelectedOption2] = useState(null);
 
   // handle onChange event of the dropdown
   const handleChange = (e) => {
     setSelectedOption(e);
+  };
+  const handledChange = (e) => {
+    setSelectedOption2(e);
   };
   return (
     <>
@@ -113,9 +117,9 @@ export default function Home() {
               <Select
                 id="select-id"
                 styles={customStyles}
-                value={selectedOption}
+                value={selectedOption2}
                 options={data}
-                onChange={handleChange}
+                onChange={handledChange}
                 getOptionLabel={(e) => (
                   <div
                     style={{ display: "flex", alignItems: "center" }}

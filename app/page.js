@@ -40,11 +40,12 @@ export default function Home() {
     }),
     menu: (base) => ({
       ...base,
-      background: "#2d2c2c94"
+      // background: "#2d2c2c94"
+      color: "#26489E"
     }),
     singleValue: (base) => ({
       ...base,
-      color: "#FFFFFF",
+      color: "#26489E",
       fontWeight: 700,
       fontSize: "14px",
       lineHeight: "17px"

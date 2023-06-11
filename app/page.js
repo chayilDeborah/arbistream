@@ -7,8 +7,9 @@ import cropmusic from "./asset/cropmusic.png";
 import box from "./asset/box.svg";
 import star from "./asset/star.svg";
 import Footer from "./component/Footer";
-import mob from './asset/mob.svg';
-import mobmus from './asset/mobmus.png'
+import mob from "./asset/mob.svg";
+import mobmus from "./asset/mobmus.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,9 +31,11 @@ export default function Home() {
           </div>
           <div className="btns-flex">
             <Image src={box} alt="svg" className="box" />
-            <button className="launch-btn1" id="launch-id">
-              Launch App
-            </button>
+            <Link href="/dex" className="launch-link">
+              <button  className="launch-btn1"id="launch-id">
+                Launch App
+              </button>
+            </Link>
             <button className="white-btn">Whitepaper</button>
           </div>
           <div className="star-grp">

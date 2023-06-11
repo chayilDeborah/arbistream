@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import Image from "next/image";
 import Nav from "./component/Nav";
 import groupmic from "./asset/groupmic.svg";
@@ -10,17 +10,26 @@ import Footer from "./component/Footer";
 import mob from "./asset/mob.svg";
 import mobmus from "./asset/mobmus.png";
 import Link from "next/link";
+import Box from '@mui/material/Box';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import HomeIcon from '@mui/icons-material/Home';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import PeopleIcon from '@mui/icons-material/People';
+import Paper from '@mui/material/Paper';
 
 export default function Home() {
+
   return (
     <>
-      <div className="wrapper">
+      <div className="wrapper" id="section1">
         <Nav />
         <div>
           <div className="page-flex">
             <Image src={groupmic} alt="svg" className="groupmic" />
             <Image src={mob} alt="svg" className="mobsvg" />
-            <div className="content-group">
+            <div className="content-group" id='section2'>
               Content Creation & Aggregation Dex Built on Optimism
             </div>
             <Image src={cropmusic} alt="svg" className="grpmusic" />
@@ -31,7 +40,7 @@ export default function Home() {
           </div>
           <div className="btns-flex">
             <Image src={box} alt="svg" className="box" />
-            <Link href="/dex" className="launch-link">
+            <Link href="/dex" className="launch-link" scroll={true}>
               <button  className="launch-btn1"id="launch-id">
                 Launch App
               </button>
@@ -43,7 +52,22 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer id='section3'/>
+      <Box sx={{ pb: 7 }} className="bottom-nav">
+      
+      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+        <BottomNavigation className="bot-navigate"
+          showlabels
+      
+        >
+         <Link href='/'> <BottomNavigationAction label="Home" icon={<HomeIcon />} className="nav-action" /></Link>
+          <Link  href='#section2'> <BottomNavigationAction label="Product" icon={<LocalMallIcon />} className="nav-action"/></Link>
+          <Link href='#'><BottomNavigationAction label="Docs" icon={<TextSnippetIcon />} className="nav-action"/></Link>
+          <Link href='#section3'><BottomNavigationAction label="Community" icon={<PeopleIcon />} className="nav-action"/></Link>
+        </BottomNavigation>
+      </Paper>
+    </Box>
     </>
   );
 }
+

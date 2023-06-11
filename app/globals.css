@@ -609,4 +609,7 @@ margin: 0px 0 0 3px;
   .nav-action:hover{
     color: #E3E3E3;
   }
+  #bot-id {
+    background: #1A1A27;
+  }
 }

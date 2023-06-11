@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
-/* body {
+body {
   background: #1E1E1E;
-} */
+}
 * {
   font-family: 'Proxima Nova';
 }
@@ -230,10 +230,17 @@ line-height: 15px;
   background: rgb(26, 26, 39);
   margin: -8px;
   padding: 0;
+  
+}
+.nav-contain {
+  max-width: 1280px;
+  width: 100%;
+ margin-left: auto;
+ margin-right: auto;
 }
 .nav-group {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between!important;
 }
 .logowhite {
  margin: 44px 0 0 120px; 
@@ -249,6 +256,30 @@ line-height: 19px;
 color: #E0E0E0;
 margin-right: 51px;
 }
+.background-wrap {
+margin-left: auto;
+margin-right: auto;
+max-width: 1280px;
+width: 100%;
+}
+.background-svg {
+  margin-top: 80px;
+}
+.content-align-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-group {
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 102.3%;
+  text-align: center;
+  width: 714px;
+  color: #FFFFFF;
+  margin-top: 227px;
+}
+
 .product-flex {
   display: flex;
   margin-right: 51px;
@@ -310,15 +341,7 @@ color: #FFFFFF;
 .mobmus {
   display: none;
 }
-.content-group {
-  font-weight: 800;
-  font-size: 70px;
-  line-height: 102.3%;
-  text-align: center;
-  width: 714px;
-  color: #FFFFFF;
-  margin: 20% 0 0 -12%;
-}
+
 .grpmusic {
   margin: 10% 0 0 -10%; 
 }
@@ -445,6 +468,11 @@ cursor: pointer;
 .bottom-nav {
   display: none;
   
+}
+@media (min-width: 1200px) {
+  .background-svg {
+    height: 67vh;
+  }
 }
 @media (min-width: 320px) and (max-width: 450px)  {
   .container{

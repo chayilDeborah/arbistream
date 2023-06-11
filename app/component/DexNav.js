@@ -5,6 +5,7 @@ import uparrow from "../asset/uparrow.svg";
 const Nav = () => {
   return (
     <>
+    <div className="nav-contain">
     <div className="nav-wrap">
         <Image src={navicon} alt="Arbistream-logo" className="logo"/>
         <div className="navbar-links">
@@ -24,6 +25,7 @@ const Nav = () => {
             <div className="nav-home">Community</div>
           </div>
         <button className="connect-btn">Connect Wallet</button>
+    </div>
     </div>
     </>
   )

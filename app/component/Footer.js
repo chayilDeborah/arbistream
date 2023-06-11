@@ -44,8 +44,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="product-grp">
-              <div className="company">
-                <div className="product-footer">Social</div>
+              <div className="company-social">
+                <div className="product-footer-social">Social</div>
                <div className="mini-footer"> <a href="#">Twitter</a></div>
                 <div className="mini-footer"><a href="#">LinkedIn</a></div>
                 <div className="mini-footer"><a href="#">Instagram</a></div>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <div className="mini-footer"><a href="#">Github</a></div>
               </div>
               <div className="company">
-                <div className="product-footer">Legal</div>
+                <div className="product-footer-social">Legal</div>
                 <div className="mini-footer">Terms</div>
                 <div className="mini-footer">Privacy</div>
                 <div className="mini-footer">Licenses</div>
@@ -69,12 +69,16 @@ const Footer = () => {
                 <div className="copyright-text">2023. Astrava. All Rights Reserved.</div>
             </div>
             <div className="social-icons">
+                <div>
                 <Image src={twitter} alt="twitter" className="soc-icons" />
                 <Image src={linkedin} alt="twitter" className="soc-icons" />
                 <Image src={instagram} alt="twitter" className="soc-icons" />
+                </div>
+                <div>
                 <Image src={medium} alt="twitter" className="soc-icons" />
                 <Image src={telegram} alt="twitter" className="soc-icons" />
                 <Image src={github} alt="twitter" className="soc-icons" />
+                </div>
             </div>
         </div>
         </div>

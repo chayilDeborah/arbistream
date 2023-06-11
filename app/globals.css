@@ -372,6 +372,9 @@ justify-content: right;
   display: flex;
 
 }
+.hamburger {
+  display: none;
+}
 .whitelogo {
   margin: 68px 93px 0 0;
 }
@@ -396,8 +399,18 @@ margin-bottom: 25px;
 .company {
   margin-left: 117px;
 }
+.company-social {
+  margin-left: 117px;
+}
 .product-grp {
   display: flex;
+}
+.product-footer-social {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  margin-bottom: 23px;
 }
 .last-footer {
   display: flex;
@@ -416,7 +429,7 @@ color: #FFFFFF;
 }
 .social-icons {
   display: flex;
-
+cursor: pointer;
 }
 .soc-icons {
   margin-right: 18.93px;
@@ -491,5 +504,81 @@ margin: 30px 0 0 15px;
   .star {
     width: 113.07px;
 height: 115.22px;
+  }
+  .footer {
+    background: #212329;
+  }
+  .footer-body {
+   flex-direction: column; 
+  }
+  .whitelogo {
+    width: 92px;
+height: 26px;
+/* margin: 32px 0 0 40px; */
+margin: 32px 0 0 0;
+  }
+  .company {
+    /* display: none; */
+    margin-left: 42px;
+  }
+  .procom-flex {
+    flex-direction: column;
+    margin-top: 38px;
+  }
+  .product-grp {
+    /* flex-direction: column; */
+  }
+ 
+  .product-footer {
+    font-size: 16px;
+line-height: 19px;
+margin-bottom: 6px;
+  }
+  .mini-footer {
+    font-size: 12px;
+line-height: 12px;
+margin-bottom: 7px;
+  }
+  .product-footer-social {
+margin-top: 32px;
+font-size: 16px;
+line-height: 19px;
+margin-bottom: 6px;
+  }
+  .company-social {
+    margin-left: 0;
+  }
+  .last-footer{
+    /* display: none; */
+    margin: 11px 0 24px 48px;
+  }
+  .social-icons {
+    display: block;
+    margin-top: -61%;
+  }
+  .soc-icons {
+    width: 22.55px;
+height: 22.55px;
+margin-right: 9px;
+  }
+  .copy {
+    width: 15px;
+height: 17px;
+  }
+  .copyright-flex {
+    margin-left: 2px;
+  }
+  .copyright-text {
+    font-size: 12px;
+line-height: 15px;
+width: 129px;
+margin: 0px 0 0 3px;
+  }
+  .hambuger-flex {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    margin: 25px 45px 0 0;
   }
 }

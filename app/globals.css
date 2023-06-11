@@ -1,6 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
-body {
+/* body {
   background: #1E1E1E;
+} */
+* {
+  font-family: 'Proxima Nova';
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .nav-wrap {
@@ -216,10 +223,273 @@ line-height: 15px;
 
 }
 
+
+
+/* Homepage */
+.wrapper {
+  background: rgb(26, 26, 39);
+  margin: -8px;
+  padding: 0;
+}
+.nav-group {
+  display: flex;
+  justify-content: space-between;
+}
+.logowhite {
+ margin: 44px 0 0 120px; 
+}
+.navbar-links {
+  display: flex;
+  margin-top: 64px;
+}
+.nav-home {
+  font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #E0E0E0;
+margin-right: 51px;
+}
+.product-flex {
+  display: flex;
+  margin-right: 51px;
+}
+#product {
+  margin-right: 6px;
+}
+.uparrow {
+  margin-top: 7px;
+}
+.launch-btn {
+  margin: 42px 130px 0 0;
+  width: 127px;
+  height: 51px;
+border: 1px solid #26569E;
+background: linear-gradient(0deg, #274A9D, #274A9D), conic-gradient(from 177.85deg at 50.39% 54.9%, #26569E -162.2deg, #762C91 28.12deg, #26569E 197.8deg, #762C91 388.12deg);
+border-radius: 5px;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+cursor: pointer;
+color: #FFFFFF;
+}
+.launch-btn1 {
+  margin: 42px 130px 0 0;
+  margin-right: 35px;
+  margin-left: 23%;
+  width: 127px;
+  height: 51px;
+border: 1px solid #26569E;
+background: linear-gradient(0deg, #274A9D, #274A9D), conic-gradient(from 177.85deg at 50.39% 54.9%, #26569E -162.2deg, #762C91 28.12deg, #26569E 197.8deg, #762C91 388.12deg);
+border-radius: 5px;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+cursor: pointer;
+color: #FFFFFF; 
+}
+.launch-btn:hover {
+  background: #264794
+}
+.page-flex {
+  display: flex;
+}
+.groupmic {
+  margin: 10% 0 0 11%;
+}
+.mobsvg {
+  display: none;
+}
+.mobmus {
+  display: none;
+}
+.content-group {
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 102.3%;
+  text-align: center;
+  width: 714px;
+  color: #FFFFFF;
+  margin: 20% 0 0 -12%;
+}
+.grpmusic {
+  margin: 10% 0 0 -10%; 
+}
+.util {
+  font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+text-align: center;
+width: 417px;
+margin: auto;
+color: #E0E0E0;
+margin-top: -67px;
+}
+.box {
+  margin: 0;
+}
+.btns-flex {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  
+}
+/* #launch-id {
+
+} */
+.white-btn {
+  margin-top: 42px;
+width: 125px;
+height: 51px;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+background: none;
+color: #FFFFFF;
+border: 2px solid #FFFFFF;
+border-radius: 5px;
+cursor: pointer;
+}
+.white-btn:hover {
+  background: #E0E0E0;
+  color: #224396;
+}
+.star {
+  margin-right: 17%;
+}
+.star-grp {
+display: flex;
+justify-content: right;
+}
+.footer {
+  background: #000000;
+  margin: -8px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-body {
+  display: flex;
+
+}
+.whitelogo {
+  margin: 68px 93px 0 0;
+}
+.procom-flex {
+  display: flex;
+  margin-top: 71px;
+}
+.product-footer {
+  font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+margin-bottom: 23px;
+}
+.mini-footer {
+  font-weight: 400;
+font-size: 21px;
+line-height: 21px;
+color: #FFFFFF;
+margin-bottom: 25px;
+}
+.company {
+  margin-left: 117px;
+}
+.product-grp {
+  display: flex;
+}
+.last-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 62px 0 66px 0;
+}
+.copyright-flex {
+  display: flex;
+}
+.copyright-text {
+  font-weight: 400;
+font-size: 20px;
+line-height: 20px;
+margin: 3px 0 0 5px;
+color: #FFFFFF;
+}
+.social-icons {
+  display: flex;
+
+}
+.soc-icons {
+  margin-right: 18.93px;
+}
 @media (min-width: 320px) and (max-width: 450px)  {
   .container{
-    /* width: 100%;
-max-width: 440px; */
 flex-shrink: 0;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .launch-btn {
+    display: none;
+  }
+  .logowhite {
+    margin: 16px 0 0 40px;
+    width: 92px;
+height: 26px;
+  }
+  .groupmic {
+    display: none;
+  }
+  .mobsvg {
+    display: block;
+    margin-top: 108px;
+    margin: 89px 0 0 -10px;
+  }
+  .content-group {
+    /* display: none; */
+    width: 303px;
+    font-weight: 800;
+font-size: 35px;
+line-height: 102.3%;
+margin: 28% 0 0 -12%;
+  }
+  .grpmusic {
+    display: none;
+  }
+  .util {
+    /* display: none; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 16px;
+line-height: 136.3%;
+width: 277px;
+text-align: center;
+  }
+  .mobmus {
+    margin-top: 71px;
+display: block;
+margin-left: -65px;
+  }
+  .box {
+    width: 100px;
+height: 100px;
+margin: 63px 0 0 -20px;
+  }
+  .launch-btn1 {
+    width: 116px;
+height: 37px;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+margin: 30px 0 0 0;
+  }
+  .white-btn {
+    width: 114px;
+height: 37px;
+margin: 30px 0 0 15px;
+  }
+  .star {
+    width: 113.07px;
+height: 115.22px;
   }
 }

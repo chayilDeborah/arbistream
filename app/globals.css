@@ -330,7 +330,22 @@ color: #FFFFFF;
   margin-right: 35px;
   margin-left: 23%;
 }
-
+.launch-btn2 {
+  display: none;
+  width: 127px;
+  height: 51px;
+border: 1px solid #26569E;
+background: linear-gradient(0deg, #274A9D, #274A9D), conic-gradient(from 177.85deg at 50.39% 54.9%, #26569E -162.2deg, #762C91 28.12deg, #26569E 197.8deg, #762C91 388.12deg);
+border-radius: 5px;
+font-weight: 700;
+font-size: 16px;
+padding: .5em;
+cursor: pointer;
+color: #FFFFFF; 
+}
+.launch-btn2:hover {
+  background: #264794
+}
 .page-flex {
   display: flex;
   flex-direction: column;
@@ -504,7 +519,15 @@ flex-shrink: 0;
     width: 92px;
 height: 26px;
   }
-
+.launch-btn2 {
+  display: block;
+  width: 116px;
+  height: 37px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 24px 0 0 30px;
+}
   .page-flex {
     min-height: 38vh;
     column-gap: 0em;

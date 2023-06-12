@@ -9,6 +9,9 @@ const Nav = () => {
       <div className="nav-contain">
         <div className="nav-group">
           <Image src={logowhite} alt="Astrava" className="logowhite" />
+          <Link href="/dex">
+            <button className="launch-btn2">Launch App</button>
+          </Link>
           <div className="navbar-links">
             <div className="nav-home">Home</div>
             <div className="product-flex">

@@ -9,6 +9,10 @@ import equiv from "../asset/equiv.svg";
 import notice from "../asset/notice.svg";
 import logowhite from '../asset/logowhite.svg'
 import tick from "../asset/tick.svg";
+import streamIcon from "../asset/stream_icon.svg"
+import swapIcon from "../asset/swap_icon.svg"
+import moreIcon from "../asset/more_icon.svg"
+import rewardsIcon from "../asset/rewards_icon.svg"
 import Box from "@mui/material/Box";
 import Link from "next/link";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -19,8 +23,29 @@ import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 import PeopleIcon from "@mui/icons-material/More";
 import GifBox from "@mui/icons-material/CardGiftcard"
 import Paper from "@mui/material/Paper";
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+
 
 export default function Dex() {
+  const [open, setOpen] = React.useState(false);
+
+  const router = useRouter();
+  const navigateToAnotherPage = () => {
+    router.push('/dex'); // Replace '/another-page' with the actual path of the page you want to navigate to
+  };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const customStyles = {
     control: (base, state) => ({
@@ -189,44 +214,69 @@ export default function Dex() {
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
           elevation={3}
         >
-          <BottomNavigation className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
-            <Link href="/">
-              {" "}
-              <BottomNavigationAction
-                label="Home"
-                icon={<HomeIcon />}
-                className="nav-action"
-                style={{ color: "#264794" }}
-              />
-            </Link>
-            <Link href="#section2">
-              {" "}
-              <BottomNavigationAction
-                label="Product"
-                icon={<LocalMallIcon />}
-                className="nav-action"
-                style={{ color: "#264794" }}
-              />
-            </Link>
-            <Link href="#">
-              <BottomNavigationAction
-                label="Docs"
-                icon={<GifBox />}
-                className="nav-action"
-                style={{ color: "#264794" }}
-              />
-            </Link>
-            <Link href="#section3">
-              <BottomNavigationAction
-                label="Community"
-                icon={<PeopleIcon />}
-                className="nav-action"
-                style={{ color: "#264794" }}
-              />
-            </Link>
+          <BottomNavigation showLabels className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
+
+            <BottomNavigationAction
+              onClick={navigateToAnotherPage}
+              label="Swap"
+              icon={<Image src={swapIcon} alt="Swap" />}
+              className="nav-action"
+              style={{ color: "#264794" }}
+            />
+
+
+            <BottomNavigationAction
+              onClick={handleClickOpen}
+              label="Stream"
+              icon={<Image src={streamIcon} alt="Stream" />}
+              className="nav-action"
+              style={{ color: "#4C4F64" }}
+            />
+
+
+            <BottomNavigationAction
+              onClick={handleClickOpen}
+              label="Docs"
+              icon={<Image src={rewardsIcon} alt="more" />}
+              className="nav-action"
+              style={{ color: "#4C4F64" }}
+            />
+
+
+            <BottomNavigationAction
+              onClick={handleClickOpen}
+              label="Community"
+              icon={<Image src={moreIcon} alt="more" />}
+              className="nav-action"
+              style={{ color: "#4C4F64" }}
+            />
+
           </BottomNavigation>
         </Paper>
       </Box>
+      <div>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">
+            {"UNDERCONSTRUCTION"}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              This Feature is coming soon.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+
+            <Button onClick={handleClose} autoFocus>
+              Okay
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
     </>
   );
 }

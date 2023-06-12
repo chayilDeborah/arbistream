@@ -599,7 +599,7 @@ height: 115.22px;
   }
   .footer {
     /* position: fixed; */
-    position: fixed;
+    /* position: fixed; */
 min-width: 100vw;
     bottom: 0;
     background: #212329;

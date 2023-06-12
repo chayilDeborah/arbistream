@@ -567,12 +567,11 @@ height: 115.22px;
     background: #212329;
   }
   .footer-body {
-   flex-direction: column; 
+   /* flex-direction: column;  */
   }
   .whitelogo {
     width: 92px;
 height: 26px;
-/* margin: 32px 0 0 40px; */
 margin: 32px 0 0 0;
   }
   .company {
@@ -581,7 +580,7 @@ margin: 32px 0 0 0;
   }
   .procom-flex {
     flex-direction: column;
-    margin-top: 38px;
+    margin: 38px 0 0 60px;
   }
   .product-grp {
     /* flex-direction: column; */
@@ -608,11 +607,10 @@ margin-bottom: 6px;
   }
   .last-footer{
     /* display: none; */
-    margin: 11px 0 24px 48px;
+  margin: 35px 0 35px 0px;
   }
   .social-icons {
-    display: block;
-    margin-top: -61%;
+    /* display: block; */
   }
   .soc-icons {
     width: 22.55px;

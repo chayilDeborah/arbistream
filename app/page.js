@@ -2,22 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import Nav from "./component/Nav";
-import groupmic from "./asset/groupmic.svg";
-import cropmusic from "./asset/cropmusic.png";
-import box from "./asset/box.svg";
-import star from "./asset/star.svg";
 import Footer from "./component/Footer";
-import mob from "./asset/mob.svg";
-import mobmus from "./asset/mobmus.png";
 import Link from "next/link";
-import Box from "@mui/material/Box";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import HomeIcon from "@mui/icons-material/Home";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
-import TextSnippetIcon from "@mui/icons-material/TextSnippet";
-import PeopleIcon from "@mui/icons-material/People";
-import Paper from "@mui/material/Paper";
+
 
 export default function Home() {
   const backgroundImageStyle = {

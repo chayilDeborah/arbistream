@@ -504,13 +504,18 @@ flex-shrink: 0;
     width: 92px;
 height: 26px;
   }
-  .groupmic {
-    display: none;
+
+  .page-flex {
+    min-height: 38vh;
+    column-gap: 0em;
+    padding-top: -1em;
   }
-  .mobsvg {
-    display: block;
-    margin-top: 108px;
-    margin: 57px 0 0 -10px;
+  .home-container {
+    padding: 6em;
+    gap: 0em;
+    margin-top: -4em;
+    padding-top: 4em;
+    padding-bottom: 7em;
   }
   .content-group {
     /* display: none; */
@@ -518,11 +523,8 @@ height: 26px;
     font-weight: 800;
 font-size: 35px;
 line-height: 102.3%;
-margin: 20% 0 0 -10%;
   }
-  .grpmusic {
-    display: none;
-  }
+ 
   .util {
     /* display: none; */
     margin-left: auto;
@@ -533,16 +535,7 @@ line-height: 136.3%;
 width: 277px;
 text-align: center;
   }
-  .mobmus {
-    margin-top: 71px;
-display: block;
-margin-left: -65px;
-  }
-  .box {
-    width: 100px;
-height: 100px;
-margin: 63px 0 0 -20px;
-  }
+
   .launch-btn1 {
     width: 116px;
 height: 37px;

@@ -52,49 +52,7 @@ export default function Home() {
         </div>
       </div>
       <Footer id="section3" />
-      <Box sx={{ pb: 7 }} className="bottom-nav">
-        <Paper
-          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-          elevation={3}
-        >
-          <BottomNavigation className="bot-navigate" style={{background: "#1A1A27"}} id='bot-id'>
-            <Link href="/">
-              {" "}
-              <BottomNavigationAction
-                label="Home"
-                icon={<HomeIcon />}
-                className="nav-action"
-                style={{color: "#264794"}}
-              />
-            </Link>
-            <Link href="#section2">
-              {" "}
-              <BottomNavigationAction
-                label="Product"
-                icon={<LocalMallIcon />}
-                className="nav-action"
-                style={{color: "#264794"}}
-              />
-            </Link>
-            <Link href="#">
-              <BottomNavigationAction
-                label="Docs"
-                icon={<TextSnippetIcon />}
-                className="nav-action"
-                style={{color: "#264794"}}
-              />
-            </Link>
-            <Link href="#section3">
-              <BottomNavigationAction
-                label="Community"
-                icon={<PeopleIcon />}
-                className="nav-action"
-                style={{color: "#264794"}}
-              />
-            </Link>
-          </BottomNavigation>
-        </Paper>
-      </Box>
+
     </>
   );
 }

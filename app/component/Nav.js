@@ -6,26 +6,26 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-   <>
-   <div className="nav-group">
-    <Image src={logowhite} alt="Astrava" className="logowhite" />
-    <div className="navbar-links">
-      <div className="nav-home">Home</div>
-      <div className="product-flex">
-        <div className="nav-home" id="product">Product</div>
-        <Image src={uparrow} alt="icon" className="uparrow" />
+    <>
+      <div className="nav-group">
+        <Image src={logowhite} alt="Astrava" className="logowhite" />
+        <div className="navbar-links">
+          <div className="nav-home">Home</div>
+          <div className="product-flex">
+            <div className="nav-home" id="product">Product</div>
+            <Image src={uparrow} alt="icon" className="uparrow" />
+          </div>
+          <div className="product-flex">
+            <div className="nav-home" id="product">Docs</div>
+            <Image src={uparrow} alt="icon" className="uparrow" />
+          </div>
+          <div className="nav-home">Community</div>
+        </div>
+        <Link href="/dex">
+          <button className="launch-btn">Launch App</button>
+        </Link>
       </div>
-      <div className="product-flex">
-        <div className="nav-home" id="product">Docs</div>
-        <Image src={uparrow} alt="icon" className="uparrow" />
-      </div>
-      <div className="nav-home">Community</div>
-    </div>
-    <Link href="/dex">
-    <button className="launch-btn">Launch App</button>
-    </Link>
-   </div>
-   </>
+    </>
   )
 }
 

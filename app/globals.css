@@ -625,10 +625,9 @@ height: 17px;
     margin-left: 2px;
   }
   .copyright-text {
-    font-size: 12px;
+    font-size: 14px;
 line-height: 15px;
-width: 129px;
-margin: 0px 0 0 3px;
+margin: 2px 0 0 3px;
   }
   .hambuger-flex {
     display: flex;

@@ -25,7 +25,7 @@ export default function Dex() {
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      background: "none",
+      background: "rgb(29, 34, 61)",
       borderRadius: "17px",
       // Overwrittes the different states of border
       borderColor: state.isFocused ? "#ECECEC" : "#ececec",
@@ -88,7 +88,7 @@ export default function Dex() {
   };
   return (
     <>
-      <div style={{ background: "#1E1E1E", margin: "-8px" }}>
+      <div style={{ background: "rgb(29, 34, 61)", margin: "-8px" }}>
         <Nav />
         <div className="main">
           <div className="container">

@@ -56,7 +56,7 @@ justify-content: center;
 .container {
   width: 345px;
 /* height: 30px; */
-background: rgba(45, 44, 44, 0.3);
+background: rgb(29, 34, 61);
 border-radius: 10px;
 display: flex;
 justify-content: center;

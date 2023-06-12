@@ -14,11 +14,13 @@ a {
   display: flex;
   justify-content: space-around;
 }
+
 .logo {
   margin-top: 22px;
   width: 147px;
   height: 82px;
 }
+
 .connect-btn {
 border: 1px solid #E3E3E3;
 color: #E3E3E3;
@@ -229,8 +231,7 @@ line-height: 15px;
 .wrapper {
   background: rgb(26, 26, 39);
   margin: -8px;
-  padding: 0;
-  
+  padding: 0; 
 }
 .nav-contain {
   max-width: 1280px;
@@ -241,6 +242,7 @@ line-height: 15px;
 .nav-group {
   display: flex;
   justify-content: space-between!important;
+  background-color: transparent;
 }
 .logowhite {
  margin: 44px 0 0 120px; 
@@ -277,7 +279,6 @@ width: 100%;
   text-align: center;
   width: 714px;
   color: #FFFFFF;
-  margin-top: 227px;
 }
 
 .product-flex {
@@ -314,7 +315,7 @@ background: linear-gradient(0deg, #274A9D, #274A9D), conic-gradient(from 177.85d
 border-radius: 5px;
 font-weight: 700;
 font-size: 16px;
-line-height: 19px;
+padding: .5em;
 cursor: pointer;
 color: #FFFFFF; 
 }
@@ -329,8 +330,23 @@ color: #FFFFFF;
   margin-right: 35px;
   margin-left: 23%;
 }
+
 .page-flex {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 85vh;
+  column-gap: 1em;
+  padding-top: 4em;
+}
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3em;
+  gap: 2em;
+  margin-top: 5em;
 }
 .groupmic {
   margin: 10% 0 0 11%;
@@ -353,27 +369,26 @@ text-align: center;
 width: 417px;
 margin: auto;
 color: #E0E0E0;
-margin-top: -67px;
 }
 .box {
   margin: 0;
 }
 .btns-flex {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   
 }
 /* #launch-id {
 
 } */
 .white-btn {
-  margin-top: 42px;
 width: 125px;
 height: 51px;
 font-weight: 700;
 font-size: 16px;
-line-height: 19px;
+padding: .5em;
 background: none;
 color: #FFFFFF;
 border: 2px solid #FFFFFF;

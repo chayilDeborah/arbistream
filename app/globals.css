@@ -508,6 +508,11 @@ cursor: pointer;
   }
 }
 @media (min-width: 320px) and (max-width: 450px)  {
+  .logo {
+    margin-top: 30px;
+    width: 86px;
+    height: 60px;
+  }
   .wrapper {
     margin: 0;
   }

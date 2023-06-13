@@ -2,7 +2,7 @@ import Image from "next/image"
 import navicon from '../asset/navicon.png'
 import uparrow from "../asset/uparrow.svg";
 import logowhite from '../asset/logowhite.svg'
-
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 const Nav = () => {
   return (
     <>
@@ -25,7 +25,7 @@ const Nav = () => {
             </div>
             <div className="nav-home">Community</div>
           </div>
-          <button className="connect-btn">Connect Wallet</button>
+          <div className="connect-btn"><ConnectButton /></div>
         </div>
       </div>
     </>

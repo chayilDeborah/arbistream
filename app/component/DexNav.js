@@ -4,6 +4,8 @@ import uparrow from "../asset/uparrow.svg";
 import logowhite from '../asset/white_icon.svg'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 const Nav = () => {
+
+
   return (
     <>
       <div className="nav-contain">

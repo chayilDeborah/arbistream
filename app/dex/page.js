@@ -35,6 +35,13 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 
 export default function Dex() {
   const [open, setOpen] = React.useState(false);
+  const styles = {
+    stickToBottom: {
+      width: '100%',
+      position: 'fixed',
+      bottom: 0,
+    },
+  };
 
   const router = useRouter();
   const navigateToAnotherPage = () => {
@@ -215,7 +222,7 @@ export default function Dex() {
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
           elevation={3}
         >
-          <BottomNavigation showLabels className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
+          <BottomNavigation sx={{ position: 'fixed', bottom: 0, width: 1.0 }} showLabels className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
 
             <BottomNavigationAction
               onClick={navigateToAnotherPage}
@@ -246,7 +253,7 @@ export default function Dex() {
 
             <BottomNavigationAction
               onClick={handleClickOpen}
-              label="Community"
+              label="More"
               icon={<Image src={moreIcon} alt="more" />}
               className="nav-action"
               style={{ color: "#4C4F64" }}

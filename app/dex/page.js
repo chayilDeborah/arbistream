@@ -217,7 +217,7 @@ export default function Dex() {
           </div>
         </div>
       </div>
-      <Box sx={{ pb: 7 }} className="bottom-nav">
+      <Box sx={{ pb: 7 }} >
         <Paper
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
           elevation={3}
@@ -244,7 +244,7 @@ export default function Dex() {
 
             <BottomNavigationAction
               onClick={handleClickOpen}
-              label="Docs"
+              label="Rewards"
               icon={<Image src={rewardsIcon} alt="more" />}
               className="nav-action"
               style={{ color: "#4C4F64" }}

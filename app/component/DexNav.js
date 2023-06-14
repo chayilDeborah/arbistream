@@ -11,7 +11,7 @@ const Nav = () => {
       <div className="nav-contain">
         <div className="nav-wrap">
           <Image src={logowhite} alt="Arbistream-logo" className="logo" />
-          <div className="navbar-links">
+          {/* <div className="navbar-links">
             <div className="nav-home">Home</div>
             <div className="product-flex">
               <div className="nav-home" id="product">
@@ -26,7 +26,7 @@ const Nav = () => {
               <Image src={uparrow} alt="icon" className="uparrow" />
             </div>
             <div className="nav-home">Community</div>
-          </div>
+          </div> */}
           <div className="connect-btn"><ConnectButton /></div>
         </div>
       </div>

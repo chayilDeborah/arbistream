@@ -124,7 +124,7 @@ export default function Dex() {
       <div style={{ background: "rgb(29, 34, 61)", margin: "-8px" }}>
         <Nav />
         <div className="main">
-          <div className="container">
+          <div className="container" style={{boxShadow: "0.2px 0.2px 1px black"}}>
             <div>
               <div className="tab-flex">
                 <div className="swap-text">Swap</div>

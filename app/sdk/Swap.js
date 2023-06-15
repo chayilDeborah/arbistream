@@ -10,7 +10,6 @@ const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
 
 async function swapExample(address, signer) {
     //                                     or any other signer/provider 
-    const signer = signer;
     const senderAddress = address;
 
     const priceRoute = await paraSwapMin.swap.getRate({

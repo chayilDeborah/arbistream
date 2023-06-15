@@ -80,7 +80,7 @@ export default function Dex() {
   const joinWhitelist = async () => {
     //set to loading
     if (isConnected) {
-
+      setWalletAddress(address)
       setLoading({ text: "Loading ....", disabled: true })
       const requestOptions = {
         method: "POST",
@@ -89,6 +89,7 @@ export default function Dex() {
           "Content-Type": "application/json",
         },
       };
+      console.log({ WalletAddress })
 
       fetch(`https://script.google.com/macros/s/AKfycbxj_mT3gbiFzUL7X-OACoCYbFgxg20RzICb97LmSYUwbRLbCU1YnEIe808q_HWRkUYP/exec?WalletAddress=${WalletAddress}&CommunityCode=${coummintyCode}`, requestOptions)
         .then(response => {
@@ -100,6 +101,7 @@ export default function Dex() {
           setLoading({ text: "Error Occured", disabled: false })
           console.error(err)
         });
+
 
     } else {
       alert("Connect Wallet your Wallet")

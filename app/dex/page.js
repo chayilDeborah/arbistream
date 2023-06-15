@@ -32,29 +32,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextField from "@mui/material/TextField"
 import { useAccount } from 'wagmi'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import { Api } from "../component/api";
 
 //1. Price
 //3. whitelist
 //https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
 //https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
 
-const postDataToWhiteList = async (walletAddress, communityCode) => {
-  const options = {
-    method: 'POST',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Content-Type': 'application/json'
-    },
-    body: '{"CommunityCode":"asjdahsdasd","WalletAddress":"askdajshdaksd"}'
-  };
-
-  return fetch('https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec', options)
-    .then(response => response.json())
-    .then(response => console.log({ response }))
-    .catch(err => console.error({ err }));
-}
 export default function Dex() {
   const [open, setOpen] = React.useState(false);
   const [openForm, setOpenForm] = React.useState(false);
@@ -101,13 +85,27 @@ export default function Dex() {
     //get user community code
     // console.log(coummintyCode)
     //send request
-    await postDataToWhiteList(WalletAddress, coummintyCode).then(res => {
-      console.log({ res })
-      setLoading({ text: "Joined", disabled: false })
-    }).catch(err => {
-      console.log({ err })
-      setLoading({ text: "Error Occured", disabled: true })
-    })
+
+
+    const requestOptions = {
+      method: "POST",
+      mode: 'no-cors',
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+
+    fetch(`https://script.google.com/macros/s/AKfycbxj_mT3gbiFzUL7X-OACoCYbFgxg20RzICb97LmSYUwbRLbCU1YnEIe808q_HWRkUYP/exec?WalletAddress=${WalletAddress}&CommunityCode=${coummintyCode}`, requestOptions)
+      .then(response => {
+        setLoading({ text: "Joined", disabled: false })
+        return response.text()
+      })
+      .then(response => console.log(response))
+      .catch(err => {
+        setLoading({ text: "Error Occured", disabled: false })
+        console.error(err)
+      });
   }
 
   const customStyles = {

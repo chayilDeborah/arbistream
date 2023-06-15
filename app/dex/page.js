@@ -32,7 +32,6 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextField from "@mui/material/TextField"
 import { useAccount } from 'wagmi'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-import { Api } from "../component/api";
 
 //1. Price
 //3. whitelist
@@ -80,32 +79,42 @@ export default function Dex() {
 
   const joinWhitelist = async () => {
     //set to loading
-    setLoading({ text: "Loading ....", disabled: true })
+    if (isConnected) {
+
+      setLoading({ text: "Loading ....", disabled: true })
+      const requestOptions = {
+        method: "POST",
+        mode: 'no-cors',
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      fetch(`https://script.google.com/macros/s/AKfycbxj_mT3gbiFzUL7X-OACoCYbFgxg20RzICb97LmSYUwbRLbCU1YnEIe808q_HWRkUYP/exec?WalletAddress=${WalletAddress}&CommunityCode=${coummintyCode}`, requestOptions)
+        .then(response => {
+          setLoading({ text: "Joined", disabled: false })
+          return response.text()
+        })
+        .then(response => console.log(response))
+        .catch(err => {
+          setLoading({ text: "Error Occured", disabled: false })
+          console.error(err)
+        });
+
+    } else {
+      alert("Connect Wallet your Wallet")
+    }
+
     //get  user address
     //get user community code
     // console.log(coummintyCode)
     //send request
 
 
-    const requestOptions = {
-      method: "POST",
-      mode: 'no-cors',
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
 
 
-    fetch(`https://script.google.com/macros/s/AKfycbxj_mT3gbiFzUL7X-OACoCYbFgxg20RzICb97LmSYUwbRLbCU1YnEIe808q_HWRkUYP/exec?WalletAddress=${WalletAddress}&CommunityCode=${coummintyCode}`, requestOptions)
-      .then(response => {
-        setLoading({ text: "Joined", disabled: false })
-        return response.text()
-      })
-      .then(response => console.log(response))
-      .catch(err => {
-        setLoading({ text: "Error Occured", disabled: false })
-        console.error(err)
-      });
+
+
   }
 
   const customStyles = {

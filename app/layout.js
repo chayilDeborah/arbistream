@@ -17,7 +17,7 @@ import { publicProvider } from 'wagmi/providers/public';
 // }
 export default function RootLayout({ children }) {
   const { chains, publicClient } = configureChains(
-    [mainnet, polygon, optimism, arbitrum],
+    [optimism],
     [
       // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
       publicProvider()

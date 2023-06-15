@@ -1,0 +1,3 @@
+const getSingleTokenBalance = (walletAddress, tokenContractAddress) => {
+
+}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import Nav from "../component/DexNav";
 import Image from "next/image";
@@ -29,12 +29,39 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import TextField from "@mui/material/TextField"
+import { useAccount } from 'wagmi'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 
+//1. Price
+//3. whitelist
+//https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
+//https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
 
+const postDataToWhiteList = async (walletAddress, communityCode) => {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Content-Type': 'application/json'
+    },
+    body: '{"CommunityCode":"asjdahsdasd","WalletAddress":"askdajshdaksd"}'
+  };
 
+  return fetch('https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec', options)
+    .then(response => response.json())
+    .then(response => console.log({ response }))
+    .catch(err => console.error({ err }));
+}
 export default function Dex() {
   const [open, setOpen] = React.useState(false);
+  const [openForm, setOpenForm] = React.useState(false);
+  const [coummintyCode, setCommuintyCode] = React.useState('')
+  const [WalletAddress, setWalletAddress] = React.useState('')
+  const [loading, setLoading] = useState({ text: "Join", disabled: false })
+  const { address, isConnecting, isDisconnected, isConnected } = useAccount()
   const styles = {
     stickToBottom: {
       width: '100%',
@@ -42,6 +69,12 @@ export default function Dex() {
       bottom: 0,
     },
   };
+  useEffect(() => {
+    if (isConnected) {
+      setWalletAddress(address)
+    }
+  }, [])
+
 
   const router = useRouter();
   const navigateToAnotherPage = () => {
@@ -50,10 +83,32 @@ export default function Dex() {
   const handleClickOpen = () => {
     setOpen(true);
   };
+  const handleClickOpenWhiteListform = () => {
+    setOpenForm(true);
+  };
 
   const handleClose = () => {
     setOpen(false);
   };
+  const handleCloseWhitelistForm = () => {
+    setOpenForm(false);
+  };
+
+  const joinWhitelist = async () => {
+    //set to loading
+    setLoading({ text: "Loading ....", disabled: true })
+    //get  user address
+    //get user community code
+    // console.log(coummintyCode)
+    //send request
+    await postDataToWhiteList(WalletAddress, coummintyCode).then(res => {
+      console.log({ res })
+      setLoading({ text: "Joined", disabled: false })
+    }).catch(err => {
+      console.log({ err })
+      setLoading({ text: "Error Occured", disabled: true })
+    })
+  }
 
   const customStyles = {
     control: (base, state) => ({
@@ -178,7 +233,7 @@ export default function Dex() {
                 />
               </div>
               <div className="swap-btn-flex">
-                <button className="swap-connect-btn">Swap</button>
+                <button onClick={() => handleClickOpenWhiteListform()} className="swap-connect-btn">Swap</button>
               </div>
               <div className="estimate-group">
                 <div className="estim">
@@ -269,9 +324,7 @@ export default function Dex() {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">
-            {"UNDERCONSTRUCTION"}
-          </DialogTitle>
+
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               This Feature is coming soon.
@@ -281,6 +334,28 @@ export default function Dex() {
 
             <Button onClick={handleClose} autoFocus>
               Okay
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+      <div>
+        <Dialog
+          open={openForm}
+          onClose={handleCloseWhitelistForm}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle>
+            White List Form
+          </DialogTitle>
+          <DialogContent sx={{ display: "flex", flexDirection: "column" }}>
+            <TextField onChange={(e) => setCommuintyCode(e.target.value)} id="outlined-basic" label="Community Code" variant="outlined" sx={{ marginBottom: 2 }} />
+            <Button onClick={() => joinWhitelist()} disabled={loading.disabled} variant="contained">{loading.text}</Button>
+          </DialogContent>
+          <DialogActions>
+
+            <Button onClick={handleCloseWhitelistForm} autoFocus>
+              Close
             </Button>
           </DialogActions>
         </Dialog>

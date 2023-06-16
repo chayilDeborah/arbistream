@@ -32,7 +32,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextField from "@mui/material/TextField"
 import { useAccount } from 'wagmi'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-
+import { fetchTokensForOptimism } from "./../sdk/FetchTokens"
 //1. Price
 //3. whitelist
 //https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
@@ -44,6 +44,14 @@ export default function Dex() {
   const [coummintyCode, setCommuintyCode] = React.useState('')
   const [WalletAddress, setWalletAddress] = React.useState('')
   const [loading, setLoading] = useState({ text: "Join", disabled: false })
+  const [tokenList, setTokenList] = useState([{
+    value: 1,
+    "symbol": "WETH",
+    "address": "0x4200000000000000000000000000000000000006",
+    "decimals": 18,
+    "img": "https://cdn.paraswap.io/token/token.png",
+    "network": 10
+  },])
   const { address, isConnecting, isDisconnected, isConnected } = useAccount()
   const styles = {
     stickToBottom: {
@@ -56,6 +64,19 @@ export default function Dex() {
     if (isConnected) {
       setWalletAddress(address)
     }
+    (async () => {
+      try {
+        // Perform asynchronous operations here
+        const token = await fetchTokensForOptimism()
+        setTokenList(token.tokens)
+        console.log(token.tokens)
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+
+
+
   }, [])
 
 
@@ -163,13 +184,11 @@ export default function Dex() {
   const data = [
     {
       value: 1,
-      token: "ETH",
-      icon: "https://res.cloudinary.com/dmye53wps/image/upload/v1686398570/ETH_ndf4du.svg",
-    },
-    {
-      value: 2,
-      token: "AST",
-      icon: "https://res.cloudinary.com/dmye53wps/image/upload/v1686394877/AST_qd9pml.svg",
+      "symbol": "WETH",
+      "address": "0x4200000000000000000000000000000000000006",
+      "decimals": 18,
+      "img": "https://cdn.paraswap.io/token/token.png",
+      "network": 10
     },
   ];
 
@@ -204,12 +223,12 @@ export default function Dex() {
                   id='select-id'
                   styles={customStyles}
                   value={selectedOption}
-                  options={data}
+                  options={tokenList}
                   onChange={handleChange}
                   getOptionLabel={(e) => (
                     <div style={{ display: "flex", alignItems: "center" }} id="selectdiv-id">
-                      <Image src={e.icon} width={20} height={20} />
-                      <span style={{ marginLeft: 5 }}>{e.token}</span>
+                      <Image src={e.img} width={20} height={20} />
+                      <span style={{ marginLeft: 5 }}>{e.symbol}</span>
                     </div>
                   )}
                 />
@@ -228,21 +247,21 @@ export default function Dex() {
                   id="select-id"
                   styles={customStyles}
                   value={selectedOption2}
-                  options={data}
+                  options={tokenList}
                   onChange={handledChange}
                   getOptionLabel={(e) => (
                     <div
                       style={{ display: "flex", alignItems: "center" }}
                       id="selectdiv-id"
                     >
-                      <Image src={e.icon} width={20} height={20} />
-                      <span style={{ marginLeft: 5 }}>{e.token}</span>
+                      <Image src={e.img} width={20} height={20} />
+                      <span style={{ marginLeft: 5 }}>{e.symbol}</span>
                     </div>
                   )}
                 />
               </div>
               <div className="swap-btn-flex">
-                <button onClick={() => handleClickOpenWhiteListform()} className="swap-connect-btn">Swap</button>
+                <button onClick={() => fetchTokensForOptimism()} className="swap-connect-btn">Swap</button>
               </div>
               <div className="estimate-group">
                 <div className="estim">
@@ -316,7 +335,7 @@ export default function Dex() {
 
 
             <BottomNavigationAction
-              onClick={handleClickOpen}
+              onClick={handleClickOpenWhiteListform}
               label="More"
               icon={<Image src={moreIcon} alt="more" />}
               className="nav-action"

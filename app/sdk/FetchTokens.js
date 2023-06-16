@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const fetchTokensForOptimism = async () => {
+export const fetchTokensForOptimism = async () => {
     const chainId = 10; // Replace with the specific chain ID for Optimism
 
     try {
@@ -8,10 +8,9 @@ const fetchTokensForOptimism = async () => {
         const tokens = response.data;
 
         // Process the tokens data here
-        console.log(tokens);
+        return tokens
+
     } catch (error) {
         console.error(error);
     }
 };
-
-fetchTokensForOptimism();

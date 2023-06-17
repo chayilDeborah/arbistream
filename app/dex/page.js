@@ -33,6 +33,8 @@ import TextField from "@mui/material/TextField"
 import { useAccount } from 'wagmi'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { fetchTokensForOptimism } from "./../sdk/FetchTokens"
+import { Getrate } from "../sdk/GetRate";
+
 //1. Price
 //3. whitelist
 //https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
@@ -44,6 +46,9 @@ export default function Dex() {
   const [coummintyCode, setCommuintyCode] = React.useState('')
   const [WalletAddress, setWalletAddress] = React.useState('')
   const [loading, setLoading] = useState({ text: "Join", disabled: false })
+  const [token1, setToken1] = useState("")
+  const [token2, setToken2] = useState("")
+  const [token1Amount, setToken1Amount] = useState("")
   const [tokenList, setTokenList] = useState([{
     value: 1,
     "symbol": "WETH",
@@ -60,10 +65,37 @@ export default function Dex() {
       bottom: 0,
     },
   };
+  const data = [
+    {
+      value: 1,
+      "symbol": "WETH",
+      "address": "0x4200000000000000000000000000000000000006",
+      "decimals": 18,
+      "img": "https://cdn.paraswap.io/token/token.png",
+      "network": 10
+    },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption2, setSelectedOption2] = useState(null);
+
+  // handle onChange event of the dropdown
+  const handleChange = (e) => {
+    setSelectedOption(e);
+    console.log({ e })
+    setToken1(e.address)
+  };
+  const handledChange = (e) => {
+    setSelectedOption2(e);
+    setToken2(e.address)
+
+  };
   useEffect(() => {
     if (isConnected) {
       setWalletAddress(address)
     }
+  }, [])
+  useEffect(() => {
     (async () => {
       try {
         // Perform asynchronous operations here
@@ -74,10 +106,34 @@ export default function Dex() {
         console.error(error);
       }
     })();
+  }, [selectedOption, selectedOption2])
+  function convertEvmUnit(value, fromDecimals, toDecimals) {
+    const valueBigInt = BigInt(value);
+    const scaleFactor = BigInt(10 ** (toDecimals - fromDecimals));
+    const convertedValue = valueBigInt * scaleFactor;
+    return convertedValue.toString();
+  }
+
+  useEffect(() => {
+
+    (async () => {
+      try {
+        // Perform asynchronous operations here
+        const res = await Getrate(token1, token2, token1Amount, address)
+        console.log(res)
+        const { destAmount, destDecimals, srcDecimals, srcAmount } = res
+        const values = convertEvmUnit(parseInt(srcAmount), parseInt(destDecimals), parseInt(srcDecimals))
+        console.log({ values })
+
+      } catch (error) {
+        console.error(error);
+      }
+    })();
 
 
 
-  }, [])
+  }, [address, token1, token1Amount, token2])
+
 
 
   const router = useRouter();
@@ -127,17 +183,6 @@ export default function Dex() {
     } else {
       alert("Connect Wallet your Wallet")
     }
-
-    //get  user address
-    //get user community code
-    // console.log(coummintyCode)
-    //send request
-
-
-
-
-
-
   }
 
   const customStyles = {
@@ -181,27 +226,7 @@ export default function Dex() {
     })
   };
 
-  const data = [
-    {
-      value: 1,
-      "symbol": "WETH",
-      "address": "0x4200000000000000000000000000000000000006",
-      "decimals": 18,
-      "img": "https://cdn.paraswap.io/token/token.png",
-      "network": 10
-    },
-  ];
 
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedOption2, setSelectedOption2] = useState(null);
-
-  // handle onChange event of the dropdown
-  const handleChange = (e) => {
-    setSelectedOption(e);
-  };
-  const handledChange = (e) => {
-    setSelectedOption2(e);
-  };
   return (
     <>
       <div style={{ background: "rgb(29, 34, 61)", margin: "-8px" }}>
@@ -215,7 +240,7 @@ export default function Dex() {
               </div>
               <div className="first-token">
                 <div>
-                  <input className="input" />
+                  <input onChange={(e) => setToken1Amount(e.target.value)} className="input" />
                   <div className="token_equivalent">$220.07</div>
                 </div>
 
@@ -225,6 +250,7 @@ export default function Dex() {
                   value={selectedOption}
                   options={tokenList}
                   onChange={handleChange}
+
                   getOptionLabel={(e) => (
                     <div style={{ display: "flex", alignItems: "center" }} id="selectdiv-id">
                       <Image src={e.img} width={20} height={20} />

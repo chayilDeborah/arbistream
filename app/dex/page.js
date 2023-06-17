@@ -111,7 +111,7 @@ export default function Dex() {
         console.error(error);
       }
     })();
-  }, [selectedOption, selectedOption2, isConnected])
+  }, [selectedOption, selectedOption2, isConnected, chain?.id])
   function convertEvmUnit(value, fromDecimals, toDecimals) {
     const valueBigInt = BigInt(value);
     const scaleFactor = BigInt(10 ** (toDecimals - fromDecimals));

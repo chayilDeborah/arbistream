@@ -3,10 +3,11 @@ import { OptimalRate, SwapSide } from "paraswap-core";
 import axios from 'axios';
 
 // construct minimal SDK with fetcher only
-const paraSwapMin = constructSimpleSDK({ chainId: 56, axios });
 
 
-export const Getrate = async (token1, token2, token1Amount, userAddress) => {
+
+export const Getrate = async (token1, token2, token1Amount, userAddress, chain) => {
+    const paraSwapMin = constructSimpleSDK({ chainId: chain, axios });
     const priceRoute = await paraSwapMin.swap.getRateByRoute({
         srcToken: token1,
         destToken: token2,

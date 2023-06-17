@@ -1,7 +1,7 @@
 const axios = require('axios');
 
-export const fetchTokensForOptimism = async () => {
-    const chainId = 56; // Replace with the specific chain ID for Optimism
+export const fetchTokensForOptimism = async (chainId) => {
+    // Replace with the specific chain ID for Optimism
 
     try {
         const response = await axios.get(`https://apiv5.paraswap.io/tokens/${chainId}`);

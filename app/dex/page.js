@@ -34,6 +34,7 @@ import { useAccount } from 'wagmi'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { fetchTokensForOptimism } from "./../sdk/FetchTokens"
 import { Getrate } from "../sdk/GetRate";
+import { useNetwork, useSwitchNetwork } from 'wagmi'
 
 //1. Price
 //3. whitelist
@@ -49,6 +50,9 @@ export default function Dex() {
   const [token1, setToken1] = useState("")
   const [token2, setToken2] = useState("")
   const [token1Amount, setToken1Amount] = useState("")
+  const { chain } = useNetwork()
+  const { chains, error, isLoading, pendingChainId, switchNetwork } =
+    useSwitchNetwork()
   const [tokenList, setTokenList] = useState([{
     value: 1,
     "symbol": "WETH",
@@ -94,19 +98,20 @@ export default function Dex() {
     if (isConnected) {
       setWalletAddress(address)
     }
+    console.log(chain)
   }, [])
   useEffect(() => {
     (async () => {
       try {
         // Perform asynchronous operations here
-        const token = await fetchTokensForOptimism()
+        const token = await fetchTokensForOptimism(chain?.id)
         setTokenList(token.tokens)
         console.log(token.tokens)
       } catch (error) {
         console.error(error);
       }
     })();
-  }, [selectedOption, selectedOption2])
+  }, [selectedOption, selectedOption2, isConnected])
   function convertEvmUnit(value, fromDecimals, toDecimals) {
     const valueBigInt = BigInt(value);
     const scaleFactor = BigInt(10 ** (toDecimals - fromDecimals));
@@ -119,7 +124,7 @@ export default function Dex() {
     (async () => {
       try {
         // Perform asynchronous operations here
-        const res = await Getrate(token1, token2, token1Amount, address)
+        const res = await Getrate(token1, token2, token1Amount, address, chain.id)
         console.log(res)
         const { destAmount, destDecimals, srcDecimals, srcAmount } = res
         const values = convertEvmUnit(parseInt(srcAmount), parseInt(destDecimals), parseInt(srcDecimals))

@@ -38,6 +38,11 @@ margin-top: 51px;
 
 }
 
+.border {
+  border: 1px  #006eff1a solid !important;
+}
+
+
 .main {
   display: flex;
 justify-content: center;
@@ -617,6 +622,7 @@ margin: 32px 0 0 0;
     /* display: none; */
     margin-left: 42px;
   }
+
   .procom-flex {
     flex-direction: column;
     margin: 38px 0 0 50px;

@@ -234,10 +234,10 @@ export default function Dex() {
 
   return (
     <>
-      <div style={{ background: "rgb(29, 34, 61)", margin: "-8px" }}>
+      <div style={{ background: "rgb(29, 34, 61)", margin: "-8px"}}>
         <Nav />
         <div className="main">
-          <div className="container border" style={{ boxShadow: "4px 8px 5px #00000052", }}>
+          <div className="container border" style={{ boxShadow: "4px 8px 5px #00000052"}}>
             <div>
               <div className="tab-flex">
                 <div className="swap-text">Swap</div>

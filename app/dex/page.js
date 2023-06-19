@@ -35,11 +35,19 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { fetchTokensForOptimism } from "./../sdk/FetchTokens"
 import { Getrate } from "../sdk/GetRate";
 import { useNetwork, useSwitchNetwork } from 'wagmi'
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 //1. Price
 //3. whitelist
 //https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
 //https://script.google.com/macros/s/AKfycbzWZ3V5LNLgROJJoVsgTkD0VXOBfY88YodogxJrQtO4IUKQikm1c7ueh7ezRZIDiWk3/exec
+const Alert = React.forwardRef(function Alert(
+  props,
+  ref,
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 export default function Dex() {
   const [open, setOpen] = React.useState(false);
@@ -47,9 +55,12 @@ export default function Dex() {
   const [coummintyCode, setCommuintyCode] = React.useState('')
   const [WalletAddress, setWalletAddress] = React.useState('')
   const [loading, setLoading] = useState({ text: "Join", disabled: false })
-  const [token1, setToken1] = useState("")
-  const [token2, setToken2] = useState("")
+  const [token1, setToken1] = useState()
+  const [token2, setToken2] = useState()
   const [token1Amount, setToken1Amount] = useState("")
+  const [amountOut, setAmountOut] = useState(0)
+  const [openError, setOpenError] = React.useState(false);
+  const [errorMsg, setErrorMsg] = React.useState("");
   const { chain } = useNetwork()
   const { chains, error, isLoading, pendingChainId, switchNetwork } =
     useSwitchNetwork()
@@ -87,11 +98,11 @@ export default function Dex() {
   const handleChange = (e) => {
     setSelectedOption(e);
     console.log({ e })
-    setToken1(e.address)
+    setToken1(e)
   };
   const handledChange = (e) => {
     setSelectedOption2(e);
-    setToken2(e.address)
+    setToken2(e)
 
   };
   useEffect(() => {
@@ -124,14 +135,24 @@ export default function Dex() {
     (async () => {
       try {
         // Perform asynchronous operations here
-        const res = await Getrate(token1, token2, token1Amount, address, chain.id)
-        console.log(res)
-        const { destAmount, destDecimals, srcDecimals, srcAmount } = res
-        const values = convertEvmUnit(parseInt(srcAmount), parseInt(destDecimals), parseInt(srcDecimals))
-        console.log({ values })
+        const res = await Getrate(token1.address, token2.address, token1Amount, address, chain.id, token1.decimals, token2.decimals)
+        if (res.priceRoute) {
+          console.log(res.priceRoute.destAmount)
+          setAmountOut(res.priceRoute.destAmount)
+
+        }
+        if (res.error) {
+          //  console.log({ res })
+          setOpenError(true)
+          setErrorMsg(res.error)
+
+        }
+
 
       } catch (error) {
         console.error(error);
+        setOpenError(true)
+        setErrorMsg("Error Occurred")
       }
     })();
 
@@ -234,10 +255,10 @@ export default function Dex() {
 
   return (
     <>
-      <div style={{     background: "linear-gradient(rgb(29 35 61), rgb(29 35 61 / 49%)), url(https://images.unsplash.com/photo-1534262521332-cfd802370cc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8&w=1000&q=80)", backgroundPosition: "center center", backgroundSize: "contain", margin: "-8px", height: "100vh"}}>
+      <div style={{ background: "linear-gradient(rgb(29 35 61), rgb(29 35 61 / 49%)), url(https://images.unsplash.com/photo-1534262521332-cfd802370cc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8&w=1000&q=80)", backgroundPosition: "center center", backgroundSize: "contain", margin: "-8px", height: "100vh" }}>
         <Nav />
         <div className="main">
-          <div className="container border" style={{ boxShadow: "4px 8px 5px #00000052"}}>
+          <div className="container border" style={{ boxShadow: "4px 8px 5px #00000052" }}>
             <div>
               <div className="tab-flex">
                 <div className="swap-text">Swap</div>
@@ -271,7 +292,7 @@ export default function Dex() {
               </div>
               <div className="first-token">
                 <div>
-                  <input className="input" />
+                  <input className="input" value={amountOut} />
                   <div className="token_equivalent">$238.07</div>
                 </div>
                 <Select
@@ -419,6 +440,13 @@ export default function Dex() {
           </DialogActions>
         </Dialog>
       </div>
+      <>
+        <Snackbar open={openError} autoHideDuration={6000} onClose={() => setOpenError(!openError)}>
+          <Alert onClose={() => setOpenError(!openError)} severity="error" sx={{ width: '100%' }}>
+            {errorMsg}
+          </Alert>
+        </Snackbar>
+      </>
     </>
   );
 }

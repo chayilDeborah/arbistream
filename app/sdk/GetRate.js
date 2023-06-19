@@ -6,16 +6,14 @@ import axios from 'axios';
 
 
 
-export const Getrate = async (token1, token2, token1Amount, userAddress, chain) => {
-    const paraSwapMin = constructSimpleSDK({ chainId: chain, axios });
-    const priceRoute = await paraSwapMin.swap.getRateByRoute({
-        srcToken: token1,
-        destToken: token2,
-        amount: token1Amount,
-        userAddress: userAddress,
-        side: "SELL",
-    });
+export const Getrate = async (token1, token2, token1Amount, userAddress, chain, srcDecimal, destdeciaml) => {
+    const options = { method: 'GET' };
+
+    return fetch(`https://apiv5.paraswap.io/prices/?srcToken=${token1}&destToken=${token2}&amount=${token1Amount}&srcDecimals=${srcDecimal}&destDecimals=${destdeciaml}&side=SELL&network=${chain}`, options)
+        .then(response => response.json())
+        .then(response => response)
+        .catch(err => err);
     // console.log({ priceRoute })
-    return priceRoute
+
 }
 

@@ -234,7 +234,7 @@ export default function Dex() {
 
   return (
     <>
-      <div style={{ background: "rgb(29, 34, 61)", margin: "-8px"}}>
+      <div style={{     background: "linear-gradient(rgb(29 35 61), rgb(29 35 61 / 49%)), url(https://images.unsplash.com/photo-1534262521332-cfd802370cc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8&w=1000&q=80)", backgroundPosition: "center center", backgroundSize: "contain", margin: "-8px", height: "100vh"}}>
         <Nav />
         <div className="main">
           <div className="container border" style={{ boxShadow: "4px 8px 5px #00000052"}}>

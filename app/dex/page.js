@@ -144,9 +144,14 @@ export default function Dex() {
           }
           if (res.code) {
             //  console.log({ res })
-            setOpenError(true)
             const { validationErrors } = res
+            setOpenError(true)
+
+
             setErrorMsg(res.reason + "\n" + validationErrors[0].reason)
+            if (validationErrors[1]) {
+              setErrorMsg(res.reason + "\n" + validationErrors[0].reason, validationErrors[1].reason)
+            }
 
           }
 
@@ -282,7 +287,7 @@ export default function Dex() {
 
                   getOptionLabel={(e) => (
                     <div style={{ display: "flex", alignItems: "center" }} id="selectdiv-id">
-                      <Image src={e.img} width={20} height={20} />
+                      <Image src={e.logoURI} width={20} height={20} />
                       <span style={{ marginLeft: 5 }}>{e.symbol}</span>
                     </div>
                   )}
@@ -309,7 +314,7 @@ export default function Dex() {
                       style={{ display: "flex", alignItems: "center" }}
                       id="selectdiv-id"
                     >
-                      <Image src={e.img} width={20} height={20} />
+                      <Image src={e.logoURI} width={20} height={20} />
                       <span style={{ marginLeft: 5 }}>{e.symbol}</span>
                     </div>
                   )}

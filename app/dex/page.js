@@ -138,26 +138,21 @@ export default function Dex() {
           // Perform asynchronous operations here
           const res = await Getrate(token1.symbol, token2.symbol, token1Amount, address, chain.id, token1.decimals, token2.decimals)
           if (res) {
-            //console.log(res)
+            console.log(res)
             setAmountOut(res.sellAmount / (10 ** token2.decimals))
 
           }
           if (res.code) {
             //  console.log({ res })
-            const { validationErrors } = res
             setOpenError(true)
-
-
-            setErrorMsg(res.reason + "\n" + validationErrors[0].reason)
-            if (validationErrors[1]) {
-              setErrorMsg(res.reason + "\n" + validationErrors[0].reason, validationErrors[1].reason)
-            }
+            const { validationErrors } = res
+            setErrorMsg(res.reason + "" + validationErrors[0].reason)
 
           }
 
 
         } catch (error) {
-          //   console.error(error);
+          console.error(error);
           setOpenError(true)
           setErrorMsg("Error Occurred")
         }
@@ -287,7 +282,7 @@ export default function Dex() {
 
                   getOptionLabel={(e) => (
                     <div style={{ display: "flex", alignItems: "center" }} id="selectdiv-id">
-                      <Image src={e.logoURI} width={20} height={20} />
+                      <Image src={e.img} width={20} height={20} />
                       <span style={{ marginLeft: 5 }}>{e.symbol}</span>
                     </div>
                   )}
@@ -314,7 +309,7 @@ export default function Dex() {
                       style={{ display: "flex", alignItems: "center" }}
                       id="selectdiv-id"
                     >
-                      <Image src={e.logoURI} width={20} height={20} />
+                      <Image src={e.img} width={20} height={20} />
                       <span style={{ marginLeft: 5 }}>{e.symbol}</span>
                     </div>
                   )}

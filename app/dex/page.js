@@ -133,26 +133,29 @@ export default function Dex() {
   useEffect(() => {
 
     (async () => {
-      try {
-        // Perform asynchronous operations here
-        const res = await Getrate(token1.address, token2.address, token1Amount, address, chain.id, token1.decimals, token2.decimals)
-        if (res.priceRoute) {
-          console.log(res.priceRoute.destAmount)
-          setAmountOut(res.priceRoute.destAmount)
+      if (token1 && token2 && token1Amount) {
+        try {
+          // Perform asynchronous operations here
+          const res = await Getrate(token1.symbol, token2.symbol, token1Amount, address, chain.id, token1.decimals, token2.decimals)
+          if (res) {
+            //console.log(res)
+            setAmountOut(res.sellAmount / (10 ** token2.decimals))
 
-        }
-        if (res.error) {
-          //  console.log({ res })
+          }
+          if (res.code) {
+            //  console.log({ res })
+            setOpenError(true)
+            const { validationErrors } = res
+            setErrorMsg(res.reason + "\n" + validationErrors[0].reason)
+
+          }
+
+
+        } catch (error) {
+          //   console.error(error);
           setOpenError(true)
-          setErrorMsg(res.error)
-
+          setErrorMsg("Error Occurred")
         }
-
-
-      } catch (error) {
-        console.error(error);
-        setOpenError(true)
-        setErrorMsg("Error Occurred")
       }
     })();
 

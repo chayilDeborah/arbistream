@@ -562,8 +562,8 @@ border-radius: 20px;
   margin: 28px 20px 0 0s;
 
 }
-.love-grp {
-
+.love-border {
+border: 2px #E4E4E4 solid;
 }
 .reaction-no {
   font-weight: 700;

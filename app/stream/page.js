@@ -45,7 +45,7 @@ const Stream = () => {
                   {liked ? (
                     <Favorite sx={{ color: "red" }} />
                   ) : (
-                    <FavoriteBorder />
+                    <Image src={love}  style={{border: "white"}} className="love-border" />
                   )}
                 </IconButton>
                 <div className="reaction-no">3.2k</div>

@@ -423,13 +423,7 @@ cursor: pointer;
   background: #E0E0E0;
   color: #224396;
 }
-.star {
-  margin-right: 17%;
-}
-.star-grp {
-display: flex;
-justify-content: right;
-}
+
 .footer {
  
   background: #000000;
@@ -509,6 +503,75 @@ cursor: pointer;
   display: none;
   
 }
+.stream-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.profile-flex-grp {
+  display: flex;
+}
+.profile-names-flex {
+  /* display: flex; */
+  margin: 0 18px 0 18px;
+}
+.profile-name {
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #E5E5E5;
+
+}
+.profile-span {
+  font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+color: rgba(133, 133, 133, 0.68);
+margin: 0 0px 5px 6px;
+}
+.profile-fam {
+  font-weight: 400;
+font-size: 18px;
+line-height: 110%;
+color: #E5E5E5;
+width: 353px;
+margin-bottom: 19px;
+}
+.profile-hastags {
+  font-weight: 400;
+font-size: 18px;
+line-height: 110%;
+color: #E5E5E5;
+}
+.profile-btn {
+  width: 88px;
+height: 35px;
+background: none;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #26489E;
+border: 2px solid #26489E;
+border-radius: 20px;
+}
+.profile-video-flex {
+  display: flex;
+}
+.prof-video {
+  margin: 28px 20px 0 0s;
+
+}
+.love-grp {
+
+}
+.reaction-no {
+  font-weight: 700;
+font-size: 12px;
+line-height: 110%;
+color: #E4E4E4;
+}
+
 @media (min-width: 1200px) {
   .background-svg {
     height: 67vh;

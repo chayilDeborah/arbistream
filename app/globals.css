@@ -757,8 +757,79 @@ margin: 2px 0 0 3px;
   .nav-action:hover{
     color: #E3E3E3;
   }
+  .nav-action1 {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .nav-action1:hover{
+    color: rgba(255, 255, 255, 1);
+  }
   #bot-id {
     background: #1A1A27;
   }
-
+  .tabs-group {
+    background: rgba(20, 20, 20);
+    display: flex;
+    justify-content: center;
+  }
+  .tablist {
+    margin-top: 16px;
+    padding-bottom: 10px;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    width: 300px; 
+  }
+  .tabs {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.71);
+font-size: 16px;
+font-family: Proxima Nova;
+  }
+  .stream-background {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+.stream-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 135% 0 23px 0;
+}
+.profile-name {
+  margin-bottom: 6px;
+}
+.profile-fam {
+  color: #FFF;
+font-size: 16px;
+font-family: Proxima Nova;
+line-height: 110%;
+width: 213px; 
+margin-bottom: 8px;
+}
+.profile-hashtags {
+  color: #FFF;
+font-size: 16px;
+font-family: Proxima Nova;
+line-height: 110%;
+}
+.reactns{
+  margin: -43% 0 0 22px;
+  
+}
+.iconbtn {
+  text-align: center;
+}
+#profileplus {
+  /* width: 52px;
+height: 60px;  */
+margin: 0;
+}
+.reaction-no {
+  text-align: center;
+}
+.combtn {
+  text-align: center;
+  margin-top: 16px;
+}
 }

@@ -243,7 +243,7 @@ export default function Home() {
           <div className="flex-col bg-[#26569E] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/wallet.svg" 
+                  src="/wallet.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}

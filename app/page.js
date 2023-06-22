@@ -75,7 +75,7 @@ export default function Home() {
           <div className="flex overflow-scroll ml-5 mt-[50px] scrollbar-hide no-scrollbar">
             <div className="relative h-96 min-w-[300px]">
               <Image
-                  src="http://127.0.0.1:3000/img1.svg" 
+                  src="/img1.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "cover"}}
@@ -84,7 +84,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 min-w-[300px]">
               <Image
-                  src="http://127.0.0.1:3000/img1.svg" 
+                  src="/img1.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "cover"}}
@@ -93,7 +93,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 min-w-[300px]">
               <Image
-                  src="http://127.0.0.1:3000/img1.svg" 
+                  src="/img1.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "cover"}}
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 min-w-[300px]">
               <Image
-                  src="http://127.0.0.1:3000/img1.svg" 
+                  src="/img1.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "cover"}}
@@ -111,7 +111,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 min-w-[300px]">
               <Image
-                  src="http://127.0.0.1:3000/img1.svg" 
+                  src="/img1.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "cover"}}
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 min-w-[300px]">
               <Image
-                  src="http://127.0.0.1:3000/img1.svg" 
+                  src="/img1.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "cover"}}
@@ -147,7 +147,7 @@ export default function Home() {
           <div className="flex-col bg-[#8F2C91] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/direct.svg" 
+                  src="/direct.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -159,7 +159,7 @@ export default function Home() {
           <div className="flex-col bg-[#912C69] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/content.svg" 
+                  src="/content.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -171,7 +171,7 @@ export default function Home() {
           <div className="flex-col bg-[#582C91] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/sharing.svg" 
+                  src="/sharing.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="flex-col bg-[#26889E] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/adverts.svg" 
+                  src="/adverts.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="flex-col bg-[#1C71A1] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/streaming.svg" 
+                  src="/streaming.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -218,7 +218,7 @@ export default function Home() {
           <div className="flex-col bg-[#26569E] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] items-center justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/bots.svg" 
+                  src="/bots.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -230,7 +230,7 @@ export default function Home() {
           <div className="flex-col bg-[#26569E] h-[168.98px] w-[207px] items-center rounded-[24px] mb-[20px] justify-items-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="http://127.0.0.1:3000/mask.svg" 
+                  src="/mask.svg" 
                   fill={true} 
                   alt="Image"
                   style={{objectFit: "fit"}}
@@ -262,7 +262,7 @@ export default function Home() {
         </div>
         <div className="relative h-[534px] w-[461px] mt-[50px] mx-auto items-center">
           <Image
-              src="http://127.0.0.1:3000/img2.svg" 
+              src="/img2.svg" 
               fill={true} 
               alt="Image"
               style={{objectFit: "fit"}}
@@ -274,7 +274,7 @@ export default function Home() {
         {/* section 6 */}
         <div className="relative h-[55px] w-[41px] mt-[200px] mx-auto items-center">
           <Image
-              src="http://127.0.0.1:3000/mic.png" 
+              src="/mic.png" 
               fill={true} 
               alt="Image"
               style={{objectFit: "fit"}}
@@ -288,7 +288,7 @@ export default function Home() {
         <div className="grid grid-cols-3 items-center justify-items-center space-y-5 h-[243px] bg-gray-400">
           <div className="relative w-[129px] h-[38px]">
             <Image
-                src="http://127.0.0.1:3000/unipass1.svg" 
+                src="/unipass1.svg" 
                 fill={true} 
                 alt="Image"
                 style={{objectFit: "fit"}}
@@ -297,7 +297,7 @@ export default function Home() {
           </div>  
           <div className="relative w-[129px] h-[38px] ">
             <Image
-                src="http://127.0.0.1:3000/pinksale2.svg" 
+                src="/pinksale2.svg" 
                 fill={true} 
                 alt="Image"
                 style={{objectFit: "fit"}}
@@ -306,7 +306,7 @@ export default function Home() {
           </div>  
           <div className="relative w-[129px] h-[38px]">
             <Image
-                src="http://127.0.0.1:3000/dexview.svg" 
+                src="/dexview.svg" 
                 fill={true} 
                 alt="Image"
                 style={{objectFit: "fit"}}
@@ -315,7 +315,7 @@ export default function Home() {
           </div>  
           <div className="relative w-[129px] h-[38px]">
             <Image
-                src="http://127.0.0.1:3000/arbitrum2.svg" 
+                src="/arbitrum2.svg" 
                 fill={true} 
                 alt="Image"
                 style={{objectFit: "fit"}}
@@ -324,7 +324,7 @@ export default function Home() {
           </div>  
           <div className="relative w-[129px] h-[38px] ">
             <Image
-                src="http://127.0.0.1:3000/arbitrum2.svg" 
+                src="/arbitrum2.svg" 
                 fill={true} 
                 alt="Image"
                 style={{objectFit: "fit"}}
@@ -333,7 +333,7 @@ export default function Home() {
           </div>  
           <div className="relative w-[129px] h-[38px] ">
             <Image
-                src="http://127.0.0.1:3000/unipass2.svg" 
+                src="/unipass2.svg" 
                 fill={true} 
                 alt="Image"
                 style={{objectFit: "fit"}}
@@ -353,7 +353,7 @@ export default function Home() {
               
               <div className="relative ml-14 mr-2 h-[38px] w-[40px] justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/vector.png" 
+                    src="/vector.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -366,7 +366,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/vector2.png" 
+                    src="/vector2.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -379,7 +379,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/awareness.png" 
+                    src="/awareness.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -392,7 +392,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/vested.png" 
+                    src="/vested.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -405,7 +405,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/presale.png" 
+                    src="/presale.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -418,7 +418,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/launch.png" 
+                    src="/launch.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -431,7 +431,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/creators.png" 
+                    src="/creators.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}
@@ -444,7 +444,7 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="http://127.0.0.1:3000/airdrop.png" 
+                    src="/airdrop.png" 
                     fill={true} 
                     alt="Image"
                     style={{objectFit: "fit"}}

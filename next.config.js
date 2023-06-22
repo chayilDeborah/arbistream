@@ -2,7 +2,7 @@
 const nextConfig = {
     images: {
         domains: [
-            'cdn.paraswap.io', "cdn.paraswap.io", "assets.coingecko.com", "assets.coingecko.com", "127.0.0.1"
+            'cdn.paraswap.io', "cdn.paraswap.io", "assets.coingecko.com", "assets.coingecko.com",
         ],
     },
     reactStrictMode: true,

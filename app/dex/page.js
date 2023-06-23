@@ -166,8 +166,8 @@ export default function Dex() {
 
 
   const router = useRouter();
-  const navigateToAnotherPage = () => {
-    router.push('/dex'); // Replace '/another-page' with the actual path of the page you want to navigate to
+  const navigateToAnotherPage = (page) => {
+    router.push(page); // Replace '/another-page' with the actual path of the page you want to navigate to
   };
   const handleClickOpen = () => {
     setOpen(true);
@@ -363,7 +363,7 @@ export default function Dex() {
           <BottomNavigation sx={{ position: 'fixed', bottom: 0, width: 1.0 }} showLabels className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
 
             <BottomNavigationAction
-              onClick={navigateToAnotherPage}
+              onClick={() => navigateToAnotherPage('/dex')}
               label="Swap"
               icon={<Image src={swapIcon} alt="Swap" />}
               className="nav-action"
@@ -372,7 +372,7 @@ export default function Dex() {
 
 
             <BottomNavigationAction
-              onClick={handleClickOpen}
+              onClick={() => navigateToAnotherPage('/stream')}
               label="Stream"
               icon={<Image src={streamIcon} alt="Stream" />}
               className="nav-action"

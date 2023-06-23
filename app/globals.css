@@ -470,6 +470,9 @@ margin-bottom: 25px;
 .product-grp {
   display: flex;
 }
+.react-groups {
+  margin-top: 25%;
+}
 .product-footer-social {
   font-weight: 700;
   font-size: 24px;
@@ -559,7 +562,7 @@ border-radius: 20px;
   display: flex;
 }
 .prof-video {
-  margin: 28px 20px 0 0s;
+  margin: 28px 20px 0 0;
 
 }
 .love-border {
@@ -570,6 +573,17 @@ border: 2px #E4E4E4 solid;
 font-size: 12px;
 line-height: 110%;
 color: #E4E4E4;
+text-align: center;
+}
+.mobile-stream {
+  display: none
+}
+.combtn {
+  text-align: center;
+  margin-top: 13px;
+}
+.comment-svgs {
+  color: white;
 }
 
 @media (min-width: 1200px) {
@@ -578,6 +592,18 @@ color: #E4E4E4;
   }
 }
 @media (min-width: 320px) and (max-width: 450px)  {
+  .mobile-stream {
+    display: block;
+  }
+  .stream-wrap {
+    display: none;
+  }
+  .stream-nav-class {
+    display: none;
+  }
+  #stream-nav-id{
+display: none;
+  }
   .logo {
     margin-top: 30px;
     width: 86px;
@@ -799,6 +825,7 @@ font-family: Proxima Nova;
 .profile-name {
   margin-bottom: 6px;
 }
+
 .profile-fam {
   color: #FFF;
 font-size: 16px;

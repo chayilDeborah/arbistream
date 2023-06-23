@@ -488,6 +488,11 @@ margin-bottom: 25px;
 .copyright-flex {
   display: flex;
 }
+.hr-line {
+  /* height: 20px */
+  margin: 41px 0 41px 0;
+  background: #EAEAEA; 
+}
 .copyright-text {
   font-weight: 400;
 font-size: 20px;
@@ -510,7 +515,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 .profile-flex-grp {
   display: flex;
@@ -532,6 +537,9 @@ font-size: 14px;
 line-height: 14px;
 color: rgba(133, 133, 133, 0.68);
 margin: 0 0px 5px 6px;
+}
+.shareicon {
+  color: white;
 }
 .profile-fam {
   font-weight: 400;
@@ -562,7 +570,7 @@ border-radius: 20px;
   display: flex;
 }
 .prof-video {
-  margin: 28px 20px 0 0;
+  margin: 35px 20px 0 0;
 
 }
 .love-border {

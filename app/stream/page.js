@@ -124,7 +124,7 @@ const Stream = () => {
         <div className="tabs-group">
           <TabsList className="tablist" id='tablist-id'>
             <StyledTab value={1} className="tabs" disabled><AddIcon /></StyledTab>
-            <StyledTab value={2} className="tabs">Following</StyledTab>
+            <StyledTab value={2} className="tabs" disabled>Following</StyledTab>
             <StyledTab value={3} className="tabs">Stream</StyledTab>
             <StyledTab value={4} className="tabs" disabled><SearchIcon /></StyledTab>
           </TabsList>

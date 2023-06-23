@@ -110,12 +110,14 @@ const Stream = () => {
                   <div className="reaction-no">500</div>
                 </div>
                 <div className="combtn">
-                  <ShareIcon />
+                  <ShareIcon className="shareicon"/>
                   <div className="reaction-no">285</div>
                 </div>
             </div>
           </div>
+          <hr className="hr-line"/>
         </div>
+        
       </div>
     <div className="mobile-stream">
       <Tabs defaultValue={3} className="tabs">

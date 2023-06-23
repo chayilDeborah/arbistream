@@ -1,27 +1,4 @@
-
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  @variants responsive {
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      /* Firefox */
-    }
-  }
-}
-
 html {
   max-height: 100%;
   overflow-y: scroll;
@@ -37,7 +14,7 @@ body {
   font-family: 'Proxima Nova';
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+   padding: 0;
 }
 a {
   text-decoration: none;
@@ -446,13 +423,7 @@ cursor: pointer;
   background: #E0E0E0;
   color: #224396;
 }
-.star {
-  margin-right: 17%;
-}
-.star-grp {
-display: flex;
-justify-content: right;
-}
+
 .footer {
  
   background: #000000;
@@ -466,7 +437,7 @@ justify-content: right;
   display: flex;
 
 }
-.hamburger { 
+.hamburger {
   display: none;
 }
 .whitelogo {
@@ -532,6 +503,75 @@ cursor: pointer;
   display: none;
   
 }
+.stream-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.profile-flex-grp {
+  display: flex;
+}
+.profile-names-flex {
+  /* display: flex; */
+  margin: 0 18px 0 18px;
+}
+.profile-name {
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #E5E5E5;
+
+}
+.profile-span {
+  font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+color: rgba(133, 133, 133, 0.68);
+margin: 0 0px 5px 6px;
+}
+.profile-fam {
+  font-weight: 400;
+font-size: 18px;
+line-height: 110%;
+color: #E5E5E5;
+width: 353px;
+margin-bottom: 19px;
+}
+.profile-hastags {
+  font-weight: 400;
+font-size: 18px;
+line-height: 110%;
+color: #E5E5E5;
+}
+.profile-btn {
+  width: 88px;
+height: 35px;
+background: none;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #26489E;
+border: 2px solid #26489E;
+border-radius: 20px;
+}
+.profile-video-flex {
+  display: flex;
+}
+.prof-video {
+  margin: 28px 20px 0 0s;
+
+}
+.love-border {
+border: 2px #E4E4E4 solid;
+}
+.reaction-no {
+  font-weight: 700;
+font-size: 12px;
+line-height: 110%;
+color: #E4E4E4;
+}
+
 @media (min-width: 1200px) {
   .background-svg {
     height: 67vh;
@@ -717,8 +757,79 @@ margin: 2px 0 0 3px;
   .nav-action:hover{
     color: #E3E3E3;
   }
+  .nav-action1 {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .nav-action1:hover{
+    color: rgba(255, 255, 255, 1);
+  }
   #bot-id {
     background: #1A1A27;
   }
-
+  .tabs-group {
+    background: rgba(20, 20, 20);
+    display: flex;
+    justify-content: center;
+  }
+  .tablist {
+    margin-top: 16px;
+    padding-bottom: 10px;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    width: 300px; 
+  }
+  .tabs {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.71);
+font-size: 16px;
+font-family: Proxima Nova;
+  }
+  .stream-background {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+.stream-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 140% 0 23px 0;
+}
+.profile-name {
+  margin-bottom: 6px;
+}
+.profile-fam {
+  color: #FFF;
+font-size: 16px;
+font-family: Proxima Nova;
+line-height: 110%;
+width: 213px; 
+margin-bottom: 8px;
+}
+.profile-hashtags {
+  color: #FFF;
+font-size: 16px;
+font-family: Proxima Nova;
+line-height: 110%;
+}
+.reactns{
+  margin: -43% 0 0 22px;
+  
+}
+.iconbtn {
+  text-align: center;
+}
+#profileplus {
+  /* width: 52px;
+height: 60px;  */
+margin: 0;
+}
+.reaction-no {
+  text-align: center;
+}
+.combtn {
+  text-align: center;
+  margin-top: 16px;
+}
 }

@@ -70,7 +70,7 @@ const Stream = () => {
   };
 
   return (
-    <>
+    <div className="stream-container">
     <div className="stream-nav-class">
     <Nav />
     </div>
@@ -255,7 +255,7 @@ const Stream = () => {
       </div>
       <></>
       </div>
-    </>
+    </div>
   );
 };
 

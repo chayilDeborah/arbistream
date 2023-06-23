@@ -53,6 +53,9 @@ justify-content: center;
   font-family: 'Proxima Nova';
  
 }
+.stream-container {
+  background: #181717!important;
+}
 .container {
   width: 345px;
 /* height: 30px; */
@@ -565,6 +568,11 @@ line-height: 19px;
 color: #26489E;
 border: 2px solid #26489E;
 border-radius: 20px;
+cursor: pointer;
+}
+.profile-btn:hover {
+  background: #26489E;
+  color: white;
 }
 .profile-video-flex {
   display: flex;

@@ -131,7 +131,7 @@ const Stream = () => {
         </div>
         <TabPanel value={1}>First page</TabPanel>
         <TabPanel value={2}>Second page</TabPanel>
-        <TabPanel value={3}>
+        <TabPanel value={3} >
           <div className="stream-background" style={{
             backgroundImage: "url('/backgroundpic.png')", backgroundSize: "cover",
             backgroundPosition: "center"
@@ -151,7 +151,7 @@ const Stream = () => {
                     {liked ? (
                       <Favorite sx={{ color: "red" }} />
                     ) : (
-                      <FavoriteBorder />
+                      <FavoriteBorder className="favorite" />
                     )}
                   </IconButton>
                   <div className="reaction-no">3.2k</div>

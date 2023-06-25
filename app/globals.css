@@ -76,6 +76,9 @@ justify-content: center;
   font-family: 'Proxima Nova';
  
 }
+.stream-container {
+  background: #181717!important;
+}
 .container {
   width: 345px;
 /* height: 30px; */
@@ -493,6 +496,9 @@ margin-bottom: 25px;
 .product-grp {
   display: flex;
 }
+.react-groups {
+  margin-top: 25%;
+}
 .product-footer-social {
   font-weight: 700;
   font-size: 24px;
@@ -507,6 +513,11 @@ margin-bottom: 25px;
 }
 .copyright-flex {
   display: flex;
+}
+.hr-line {
+  /* height: 20px */
+  margin: 41px 0 41px 0;
+  background: #EAEAEA; 
 }
 .copyright-text {
   font-weight: 400;
@@ -530,7 +541,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 .profile-flex-grp {
   display: flex;
@@ -552,6 +563,12 @@ font-size: 14px;
 line-height: 14px;
 color: rgba(133, 133, 133, 0.68);
 margin: 0 0px 5px 6px;
+}
+.shareicon {
+  color: white;
+}
+.favorite {
+  color: white;
 }
 .profile-fam {
   font-weight: 400;
@@ -577,12 +594,17 @@ line-height: 19px;
 color: #26489E;
 border: 2px solid #26489E;
 border-radius: 20px;
+cursor: pointer;
+}
+.profile-btn:hover {
+  background: #26489E;
+  color: white;
 }
 .profile-video-flex {
   display: flex;
 }
 .prof-video {
-  margin: 28px 20px 0 0s;
+  margin: 35px 20px 0 0;
 
 }
 .love-border {
@@ -593,6 +615,17 @@ border: 2px #E4E4E4 solid;
 font-size: 12px;
 line-height: 110%;
 color: #E4E4E4;
+text-align: center;
+}
+.mobile-stream {
+  display: none
+}
+.combtn {
+  text-align: center;
+  margin-top: 13px;
+}
+.comment-svgs {
+  color: white;
 }
 
 @media (min-width: 1200px) {
@@ -601,6 +634,18 @@ color: #E4E4E4;
   }
 }
 @media (min-width: 320px) and (max-width: 450px)  {
+  .mobile-stream {
+    display: block;
+  }
+  .stream-wrap {
+    display: none;
+  }
+  .stream-nav-class {
+    display: none;
+  }
+  #stream-nav-id{
+display: none;
+  }
   .logo {
     margin-top: 30px;
     width: 86px;
@@ -822,6 +867,7 @@ font-family: Proxima Nova;
 .profile-name {
   margin-bottom: 6px;
 }
+
 .profile-fam {
   color: #FFF;
 font-size: 16px;

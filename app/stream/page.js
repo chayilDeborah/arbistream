@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Nav from "../component/Nav";
 import { IconButton } from "@mui/material";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
 import { styled } from '@mui/system';
@@ -10,6 +11,9 @@ import TabPanel from '@mui/base/TabPanel';
 import Tab, { tabClasses } from '@mui/base/Tab';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from "next/image";
+import profile from "../asset/profile.svg";
+import profilevideo from "../asset/profilevideo.svg";
+import love from "../asset/love.svg";
 import profileplus from "../asset/profileplus.svg";
 import comment from '../asset/comment.svg';
 import ShareIcon from '@mui/icons-material/Share';
@@ -66,19 +70,68 @@ const Stream = () => {
   };
 
   return (
-    <>
+    <div className="stream-container">
+    <div className="stream-nav-class">
+    <Nav />
+    </div>
+      <div className="stream-wrap">
+        <div>
+          <div className="profile-flex-grp">
+            <Image src={profile} alt="profile-img" className="profile-img" />
+            <div className="profile-names-flex">
+              <div className="profile-name">
+                Nakiya<span className="profile-span">@Nakiya</span>
+              </div>
+              <div className="profile-fam">
+                Family is all that matters. What did you do for thanksgiving.
+                Drop a comment.
+              </div>
+              <div className="profile-hastags">
+                #family #bonding #thanksgiving
+              </div>
+            </div>
+            <button className="profile-btn">Follow</button>
+          </div>
+          <div className="profile-video-flex">
+            <Image src={profilevideo} alt="video" className="prof-video" />
+            <div className="react-groups">
+              <div className="love-grp">
+                <IconButton onClick={handleLikeClick}>
+                  {liked ? (
+                    <Favorite sx={{ color: "red" }} />
+                  ) : (
+                    <Image src={love}  style={{border: "white"}} className="love-border" />
+                  )}
+                </IconButton>
+                <div className="reaction-no">3.2k</div>
+              </div>
+              <div className="combtn">
+                  <Image src={comment} alt='comment' className="comment-svgs" />
+                  <div className="reaction-no">500</div>
+                </div>
+                <div className="combtn">
+                  <ShareIcon className="shareicon"/>
+                  <div className="reaction-no">285</div>
+                </div>
+            </div>
+          </div>
+          <hr className="hr-line"/>
+        </div>
+        
+      </div>
+    <div className="mobile-stream">
       <Tabs defaultValue={3} className="tabs">
         <div className="tabs-group">
           <TabsList className="tablist" id='tablist-id'>
             <StyledTab value={1} className="tabs" disabled><AddIcon /></StyledTab>
-            <StyledTab value={2} className="tabs">Following</StyledTab>
+            <StyledTab value={2} className="tabs" disabled>Following</StyledTab>
             <StyledTab value={3} className="tabs">Stream</StyledTab>
             <StyledTab value={4} className="tabs" disabled><SearchIcon /></StyledTab>
           </TabsList>
         </div>
         <TabPanel value={1}>First page</TabPanel>
         <TabPanel value={2}>Second page</TabPanel>
-        <TabPanel value={3}>
+        <TabPanel value={3} >
           <div className="stream-background" style={{
             backgroundImage: "url('/backgroundpic.png')", backgroundSize: "cover",
             backgroundPosition: "center"
@@ -98,7 +151,7 @@ const Stream = () => {
                     {liked ? (
                       <Favorite sx={{ color: "red" }} />
                     ) : (
-                      <FavoriteBorder />
+                      <FavoriteBorder className="favorite" />
                     )}
                   </IconButton>
                   <div className="reaction-no">3.2k</div>
@@ -201,7 +254,8 @@ const Stream = () => {
         </Dialog>
       </div>
       <></>
-    </>
+      </div>
+    </div>
   );
 };
 

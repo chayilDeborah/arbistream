@@ -169,6 +169,9 @@ export default function Dex() {
   const navigateToAnotherPage = (page) => {
     router.push(page); // Replace '/another-page' with the actual path of the page you want to navigate to
   };
+  const navigateToStreamPage = () => {
+    router.push('/stream');
+  };
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -373,6 +376,7 @@ export default function Dex() {
 
             <BottomNavigationAction
               onClick={() => navigateToAnotherPage('/stream')}
+
               label="Stream"
               icon={<Image src={streamIcon} alt="Stream" />}
               className="nav-action"

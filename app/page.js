@@ -4,7 +4,7 @@ import Image from "next/image";
 import Nav from "./component/Nav";
 import Footer from "./component/Footer";
 import Link from "next/link";
-
+import bar from './asset/bar.svg'
 
 export default function Home() {
   const backgroundImageStyle = {
@@ -68,11 +68,11 @@ export default function Home() {
         </div>
 
         {/* section 2  */}
-        <div className="mt-[100px]">
-          <div className="text-white content-group mx-auto mb-[50px]"> Watch and Engage with Your Favourite Content</div>
-          <p className="text-white util mb-[50px]">Earn Rewards For Engagements in Astrava Tokens</p>
-          
-          <div className="flex overflow-scroll ml-5 mt-[50px] scrollbar-hide no-scrollbar">
+        <div className="mt-[60px]">
+          <div className="text-white content-group mx-auto mb-[50px]" id="watch-id"> Watch and Engage with Your Favourite Content</div>
+          <p className="text-white util mb-[50px]" id="util-id">Earn Rewards For Engagements in Astrava Tokens</p>
+          <div className="flex justify-center">
+          <div className="flex overflow-scroll ml-5 mt-[50px] scrollbar-hide no-scrollbar w-full max-w-7xl">
             <div className="relative h-96 min-w-[300px]">
               <Image
                   src="/img1.svg" 
@@ -128,12 +128,14 @@ export default function Home() {
               />
             </div>
           </div>  
-
+          </div>
+          
           <div className="flex items-center mx-auto my-5 align-center">
             <button className="bg-[#274A9D] mx-auto text-white font-semibold rounded-[5px] py-3 px-7">
               Explore Top Creators
             </button>
           </div>
+          <Image src={bar} alt='bar' className="bar" />
         </div>
         {/* end */}
 

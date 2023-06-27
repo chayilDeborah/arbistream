@@ -4,7 +4,12 @@ import Image from "next/image";
 import Nav from "./component/Nav";
 import Footer from "./component/Footer";
 import Link from "next/link";
-import bar from './asset/bar.svg'
+import cropbar from './asset/cropbar.png';
+import middlebox from './asset/middlebox.png';
+import phonemic from './asset/phonemic.png';
+import smallplay from './asset/smallplay.png'
+import playsvg from './asset/playsvg.svg'
+import camera from './asset/camera.svg'
 
 export default function Home() {
   const backgroundImageStyle = {
@@ -15,9 +20,9 @@ export default function Home() {
   };
   return (
     <>
+    <div className='bigg-wrap'>
       <div className="wrapper" id="section1">
         <Nav />
-
         <div>
           <div
             className="page-flex"
@@ -72,184 +77,198 @@ export default function Home() {
           <div className="text-white content-group mx-auto mb-[50px]" id="watch-id"> Watch and Engage with Your Favourite Content</div>
           <p className="text-white util mb-[50px]" id="util-id">Earn Rewards For Engagements in Astrava Tokens</p>
           <div className="flex justify-center">
-          <div className="flex overflow-scroll ml-5 mt-[50px] scrollbar-hide no-scrollbar w-full max-w-7xl">
-            <div className="relative h-96 min-w-[300px]">
-              <Image
-                  src="/img1.svg" 
-                  fill={true} 
+            <div className="flex overflow-scroll ml-5 mt-[50px] scrollbar-hide no-scrollbar w-full max-w-7xl">
+              <div className="relative h-96 min-w-[300px]">
+                <Image
+                  src="/img1.svg"
+                  fill={true}
                   alt="Image"
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className="rounded-2xl"
-              />
-            </div>
-            <div className="relative h-96 min-w-[300px]">
-              <Image
-                  src="/img1.svg" 
-                  fill={true} 
+                />
+              </div>
+              <div className="relative h-96 min-w-[300px]">
+                <Image
+                  src="/img1.svg"
+                  fill={true}
                   alt="Image"
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className="rounded-2xl"
-              />
-            </div>
-            <div className="relative h-96 min-w-[300px]">
-              <Image
-                  src="/img1.svg" 
-                  fill={true} 
+                />
+              </div>
+              <div className="relative h-96 min-w-[300px]">
+                <Image
+                  src="/img1.svg"
+                  fill={true}
                   alt="Image"
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className="rounded-2xl"
-              />
-            </div>
-            <div className="relative h-96 min-w-[300px]">
-              <Image
-                  src="/img1.svg" 
-                  fill={true} 
+                />
+              </div>
+              <div className="relative h-96 min-w-[300px]">
+                <Image
+                  src="/img1.svg"
+                  fill={true}
                   alt="Image"
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className="rounded-2xl"
-              />
-            </div>
-            <div className="relative h-96 min-w-[300px]">
-              <Image
-                  src="/img1.svg" 
-                  fill={true} 
+                />
+              </div>
+              <div className="relative h-96 min-w-[300px]">
+                <Image
+                  src="/img1.svg"
+                  fill={true}
                   alt="Image"
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className="rounded-2xl"
-              />
-            </div>
-            <div className="relative h-96 min-w-[300px]">
-              <Image
-                  src="/img1.svg" 
-                  fill={true} 
+                />
+              </div>
+              <div className="relative h-96 min-w-[300px]">
+                <Image
+                  src="/img1.svg"
+                  fill={true}
                   alt="Image"
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className="rounded-2xl"
-              />
+                />
+              </div>
             </div>
-          </div>  
           </div>
-          
-          <div className="flex items-center mx-auto my-5 align-center">
+
+          <div className="flex items-center explorcret mx-auto my-5 align-center">
             <button className="bg-[#274A9D] mx-auto text-white font-semibold rounded-[5px] py-3 px-7">
               Explore Top Creators
             </button>
           </div>
-          <Image src={bar} alt='bar' className="bar" />
+          <Image src={cropbar} alt='bar' className="bar" />
+          <Image src={middlebox} alt="svg" className="mx-auto mt-[19px]" />
         </div>
         {/* end */}
 
         {/* section 3 */}
-        <div className="flex-col text-white items-center mx-auto mt-[200px] py-[25px] bg-[#4F1763] ">
-          <div className="text-white content-group mx-auto mb-[16px]">Multiple Monitization Options</div>
-          <p className="text-white util mb-[50px]">Monitize Your content In Multiple Ways as a Creator</p>
+        <div className="flex-col text-white items-center mx-auto mt-[200px] pt-[42px] pb-[49px] bg-[#4F1763]">
+          <div className="text-white content-group mx-auto mb-[16px] z-10" id="util-id">Multiple Monitization Options</div>
+          <p className="text-white util mb-[50px]" id="util-id">Monitize Your content In Multiple Ways as a Creator</p>
         </div>
-
-        <div className="flex mt-[75px] bg-background-black text-white justify-evenly mx-auto">
-          <div className="flex-col bg-[#8F2C91] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
+        <div className="flex justify-end phone-class">
+          <Image src={phonemic} alt='svg' className='cropmus' />
+        </div>
+        <div className="flex justify-center bg-background-black text-white rounded-boxes">
+          <div className='flex justify-evenly'>
+            <Image src={smallplay} alt='image' />
+            <div className="flex-col bg-[#8F2C91] h-[168.98px] w-[207px] rounded-[24px] mb-[60px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="/direct.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/direct.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center mt-3 justify-center text-lg mb-[50px]">Direct Contributions</div>
-          </div>
-          <div className="flex-col bg-[#912C69] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
+            </div>
+            <div className="flex-col bg-[#912C69] h-[168.98px] w-[207px] rounded-[24px] mb-[60px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="/content.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/content.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center mt-3 justify-center text-lg mb-[50px]">Sponsored Content</div>
-          </div>
-          <div className="flex-col bg-[#582C91] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
+            </div>
+            <div className="flex-col bg-[#582C91] h-[168.98px] w-[207px] rounded-[24px] mb-[60px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="/sharing.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/sharing.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center mt-3 justify-center text-lg mb-[50px]">Revenue Sharing</div>
+            </div>
           </div>
-          <div className="flex-col bg-[#26889E] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
+          <div className='flex justify-evenly advert-group'>
+            <div className="flex-col bg-[#26889E] h-[168.98px] w-[207px] rounded-[24px] mb-[60px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="/adverts.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/adverts.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center mt-3 justify-center text-lg mb-[50px]">Adverts placement</div>
-          </div>
-          <div className="flex-col bg-[#1C71A1] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
+            </div>
+            <div className="flex-col bg-[#1C71A1] h-[168.98px] w-[207px] rounded-[24px] mb-[60px] justify-center">
             <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
               <Image
-                  src="/streaming.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/streaming.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center justify-center text-lg">Real Yield from</div>
             <div className="flex text-white font-semibold items-center justify-center text-lg mb-[50px]">Streaming</div>
           </div>
+          </div>
         </div>
         {/* end */}
 
         {/* section 4  */}
-        <div className="mt-[100px]">
-          <div className="text-white content-group mx-auto mb-[50px]"> Secure and Transparent Way To Trade Digital Assets</div>
-          <p className="text-white util mb-[50px]">Trade Easily, No Hidden Charges, Community Driven</p>
+        <Image src={playsvg} alt='image' className='playsvg' />
+        <Image src={camera} alt="image" />
+        <div className="secure-group">
+          
+          <div>
+          <div className="text-white content-group mx-auto mb-[50px]" id="util-id"> Secure and Transparent Way To Trade Digital Assets</div>
+          <p className="text-white util mb-[10px]" id="util-id">Trade Easily, No Hidden Charges, Community Driven</p>
+          </div>
         </div>
 
-        <div className="flex mt-[75px] bg-background-black text-white justify-evenly mx-auto">
-          <div className="flex-col bg-[#26569E] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] items-center justify-center">
-            <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
+        <div className="flex mt-[75px] bg-background-black text-white justify-evenly mx-auto three-box">
+          <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[60px] items-center justify-center">
+            <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
               <Image
-                  src="/bots.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/bots.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center justify-center mt-3 text-lg mb-[50px]">Alpha Caller Bots</div>
           </div>
-          <div className="flex-col bg-[#26569E] h-[168.98px] w-[207px] items-center rounded-[24px] mb-[20px] justify-items-center">
-            <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
+          <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] items-center rounded-[24px] mb-[20px] justify-items-center">
+            <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
               <Image
-                  src="/mask.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/mask.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold mx-auto items-center justify-center text-lg">Streamlined</div>
             <div className="flex text-white font-semibold mx-auto items-center justify-center text-lg mb-[50px]">Blockchain Updates</div>
           </div>
-          <div className="flex-col bg-[#26569E] h-[168.98px] w-[207px] rounded-[24px] mb-[20px] justify-center">
-            <div className="relative h-[60px] w-[60px] mt-[50px] mx-auto items-center">
+          
+          <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[20px] justify-center">
+            <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
               <Image
-                  src="/wallet.svg" 
-                  fill={true} 
-                  alt="Image"
-                  style={{objectFit: "fit"}}
-                  className=""
+                src="/wallet.svg"
+                fill={true}
+                alt="Image"
+                style={{ objectFit: "fit" }}
+                className=""
               />
             </div>
             <div className="flex text-white font-semibold items-center mt-3 justify-center text-lg mb-[50px]">Wallet Monitoring</div>
@@ -258,17 +277,17 @@ export default function Home() {
         {/* end */}
 
         {/* section 5 */}
-        <div className="flex-col text-white items-center mx-auto mt-[200px] py-[25px] bg-[#4F1763] ">
+        <div className="flex-col text-white items-center mx-auto mt-[65px] py-[25px] bg-[#4F1763] ">
           <div className="text-white content-group mx-auto mb-[16px]">Platform Features</div>
           <p className="text-white util mb-[50px]">Utilities and Well Though Out Features, Features Just for You</p>
         </div>
         <div className="relative h-[534px] w-[461px] mt-[50px] mx-auto items-center">
           <Image
-              src="/img2.svg" 
-              fill={true} 
-              alt="Image"
-              style={{objectFit: "fit"}}
-              className=""
+            src="/img2.svg"
+            fill={true}
+            alt="Image"
+            style={{ objectFit: "fit" }}
+            className=""
           />
         </div>
         {/* end */}
@@ -276,11 +295,11 @@ export default function Home() {
         {/* section 6 */}
         <div className="relative h-[55px] w-[41px] mt-[200px] mx-auto items-center">
           <Image
-              src="/mic.png" 
-              fill={true} 
-              alt="Image"
-              style={{objectFit: "fit"}}
-              className=""
+            src="/mic.png"
+            fill={true}
+            alt="Image"
+            style={{ objectFit: "fit" }}
+            className=""
           />
         </div>
         <div className="my-[30px]">
@@ -290,58 +309,58 @@ export default function Home() {
         <div className="grid grid-cols-3 items-center justify-items-center space-y-5 h-[243px] bg-gray-400">
           <div className="relative w-[129px] h-[38px]">
             <Image
-                src="/unipass1.svg" 
-                fill={true} 
-                alt="Image"
-                style={{objectFit: "fit"}}
-                className=""
+              src="/unipass1.svg"
+              fill={true}
+              alt="Image"
+              style={{ objectFit: "fit" }}
+              className=""
             />
-          </div>  
+          </div>
           <div className="relative w-[129px] h-[38px] ">
             <Image
-                src="/pinksale2.svg" 
-                fill={true} 
-                alt="Image"
-                style={{objectFit: "fit"}}
-                className=""
+              src="/pinksale2.svg"
+              fill={true}
+              alt="Image"
+              style={{ objectFit: "fit" }}
+              className=""
             />
-          </div>  
+          </div>
           <div className="relative w-[129px] h-[38px]">
             <Image
-                src="/dexview.svg" 
-                fill={true} 
-                alt="Image"
-                style={{objectFit: "fit"}}
-                className=""
+              src="/dexview.svg"
+              fill={true}
+              alt="Image"
+              style={{ objectFit: "fit" }}
+              className=""
             />
-          </div>  
+          </div>
           <div className="relative w-[129px] h-[38px]">
             <Image
-                src="/arbitrum2.svg" 
-                fill={true} 
-                alt="Image"
-                style={{objectFit: "fit"}}
-                className=""
+              src="/arbitrum2.svg"
+              fill={true}
+              alt="Image"
+              style={{ objectFit: "fit" }}
+              className=""
             />
-          </div>  
+          </div>
           <div className="relative w-[129px] h-[38px] ">
             <Image
-                src="/arbitrum2.svg" 
-                fill={true} 
-                alt="Image"
-                style={{objectFit: "fit"}}
-                className=""
+              src="/arbitrum2.svg"
+              fill={true}
+              alt="Image"
+              style={{ objectFit: "fit" }}
+              className=""
             />
-          </div>  
+          </div>
           <div className="relative w-[129px] h-[38px] ">
             <Image
-                src="/unipass2.svg" 
-                fill={true} 
-                alt="Image"
-                style={{objectFit: "fit"}}
-                className=""
+              src="/unipass2.svg"
+              fill={true}
+              alt="Image"
+              style={{ objectFit: "fit" }}
+              className=""
             />
-          </div>         
+          </div>
         </div>
         {/* end */}
 
@@ -349,30 +368,30 @@ export default function Home() {
         <div className="flex-col text-white items-center mx-auto mt-[200px] py-[25px] bg-[#4F1763] ">
           <div className="text-white content-group mx-auto mb-[16px]">Our RoadMap</div>
           <p className="text-white util mb-[50px]">Anticipate Our Plans & RoadMap</p>
-          
+
           <div className="space-y-5 mt-10 ">
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-              
+
               <div className="relative ml-14 mr-2 h-[38px] w-[40px] justify-evenly items-center">
                 <Image
-                    src="/vector.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/vector.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
+              </div>
+              <p className="text-lg right-3 font-semibold">Platform Development Commencement</p>
             </div>
-            <p className="text-lg right-3 font-semibold">Platform Development Commencement</p>
-            </div>
-            
+
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/vector2.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/vector2.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Community Building</p>
@@ -381,11 +400,11 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/awareness.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/awareness.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Awareness Creation</p>
@@ -394,11 +413,11 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/vested.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/vested.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Vested private Sale</p>
@@ -407,11 +426,11 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/presale.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/presale.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Public Presale</p>
@@ -420,11 +439,11 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/launch.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/launch.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Platform Launch</p>
@@ -433,11 +452,11 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/creators.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/creators.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Creators Onboarding</p>
@@ -446,21 +465,21 @@ export default function Home() {
             <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
               <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
                 <Image
-                    src="/airdrop.png" 
-                    fill={true} 
-                    alt="Image"
-                    style={{objectFit: "fit"}}
-                    className=""
+                  src="/airdrop.png"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
                 />
               </div>
               <p className="text-lg font-semibold">Token Airdrop</p>
             </div>
           </div>
-          
+
         </div>
         {/* end */}
       </div>
-
+    </div>
       <Footer id="section3" />
     </>
   );

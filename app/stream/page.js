@@ -26,7 +26,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import Box from "@mui/material/Box";
-import {useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
@@ -66,14 +66,14 @@ const Stream = () => {
   };
 
   const handleClose = () => {
-    setOpen(false);
+    setOpen(falseAST);
   };
 
   return (
     <div className="stream-container">
-    <div className="stream-nav-class">
-    <Nav />
-    </div>
+      <div className="stream-nav-class">
+        <Nav />
+      </div>
       <div className="stream-wrap">
         <div>
           <div className="profile-flex-grp">
@@ -100,160 +100,160 @@ const Stream = () => {
                   {liked ? (
                     <Favorite sx={{ color: "red" }} />
                   ) : (
-                    <Image src={love}  style={{border: "white"}} className="love-border" />
+                    <Image src={love} style={{ border: "white" }} className="love-border" />
                   )}
                 </IconButton>
                 <div className="reaction-no">3.2k</div>
               </div>
               <div className="combtn">
-                  <Image src={comment} alt='comment' className="comment-svgs" />
-                  <div className="reaction-no">500</div>
-                </div>
-                <div className="combtn">
-                  <ShareIcon className="shareicon"/>
-                  <div className="reaction-no">285</div>
-                </div>
-            </div>
-          </div>
-          <hr className="hr-line"/>
-        </div>
-        
-      </div>
-    <div className="mobile-stream">
-      <Tabs defaultValue={3} className="tabs">
-        <div className="tabs-group">
-          <TabsList className="tablist" id='tablist-id'>
-            <StyledTab value={1} className="tabs" disabled><AddIcon /></StyledTab>
-            <StyledTab value={2} className="tabs" disabled>Following</StyledTab>
-            <StyledTab value={3} className="tabs">Stream</StyledTab>
-            <StyledTab value={4} className="tabs" disabled><SearchIcon /></StyledTab>
-          </TabsList>
-        </div>
-        <TabPanel value={1}>First page</TabPanel>
-        <TabPanel value={2}>Second page</TabPanel>
-        <TabPanel value={3} >
-          <div className="stream-background" style={{
-            backgroundImage: "url('/backgroundpic.png')", backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}>
-            <div className="stream-details">
-              <div className="feed-details">
-                <div className="feed-name">
-                  <div className="profile-name">Nakiya<span className="profile-span">@Nakiya</span></div>
-                </div>
-                <div className="profile-fam">Family is all that matters. What did you do for thanksgiving. Drop a comment.</div>
-                <div className="profile-hashtags">#family #bonding #thanksgiving</div>
+                <Image src={comment} alt='comment' className="comment-svgs" />
+                <div className="reaction-no">500</div>
               </div>
-              <div className="reactns">
-                <Image src={profileplus} alt="profile-img" className="profile-img" id="profileplus" />
-                <div className="iconbtn">
-                  <IconButton onClick={handleLikeClick}>
-                    {liked ? (
-                      <Favorite sx={{ color: "red" }} />
-                    ) : (
-                      <FavoriteBorder className="favorite" />
-                    )}
-                  </IconButton>
-                  <div className="reaction-no">3.2k</div>
-                </div>
-                <div className="combtn">
-                  <Image src={comment} alt='comment' className="" />
-                  <div className="reaction-no">500</div>
-                </div>
-                <div className="combtn">
-                  <ShareIcon />
-                  <div className="reaction-no">285</div>
-                </div>
+              <div className="combtn">
+                <ShareIcon className="shareicon" />
+                <div className="reaction-no">285</div>
               </div>
             </div>
           </div>
-        </TabPanel>
-      </Tabs>
-      <Box sx={{ pb: 7 }} >
-        <Paper
-          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-          elevation={3}
-        >
-          <BottomNavigation sx={{ position: 'fixed', bottom: 0, width: 1.0 }} showLabels className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
+          <hr className="hr-line" />
+        </div>
 
-            <BottomNavigationAction
-              onClick={navigateToAnotherPage}
-              icon={<VideoLibraryIcon  />}
-              className="nav-action1"
-              style={{ color: "#264794" }}
-            />
-
-
-            <BottomNavigationAction
-              onClick={handleClickOpen}
-              icon={<LibraryMusicIcon />}
-              className="nav-action1"
-              style={{ color: "#4C4F64" }}
-            />
-
-
-            <BottomNavigationAction
-              onClick={handleClickOpen}
-            
-              icon={<MarkChatUnreadIcon />}
-              className="nav-action1"
-              style={{ color: "#4C4F64" }}
-            />
-
-
-            <BottomNavigationAction
-              onClick={handleClickOpenWhiteListform}
-              icon={<Person2Icon />}
-              className="nav-action1"
-              style={{ color: "#4C4F64" }}
-            />
-
-          </BottomNavigation>
-        </Paper>
-      </Box>
-      <div>
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-
-          <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              This Feature is coming soon.
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-
-            <Button onClick={handleClose} autoFocus>
-              Okay
-            </Button>
-          </DialogActions>
-        </Dialog>
       </div>
-      <div>
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
+      <div className="mobile-stream">
+        <Tabs defaultValue={3} className="tabs">
+          <div className="tabs-group">
+            <TabsList className="tablist" id='tablist-id'>
+              <StyledTab value={1} className="tabs" disabled><AddIcon /></StyledTab>
+              <StyledTab value={2} className="tabs" disabled>Following</StyledTab>
+              <StyledTab value={3} className="tabs">Stream</StyledTab>
+              <StyledTab value={4} className="tabs" disabled><SearchIcon /></StyledTab>
+            </TabsList>
+          </div>
+          <TabPanel value={1}>First page</TabPanel>
+          <TabPanel value={2}>Second page</TabPanel>
+          <TabPanel value={3} >
+            <div className="stream-background" style={{
+              backgroundImage: "url('/backgroundpic.png')", backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}>
+              <div className="stream-details">
+                <div className="feed-details">
+                  <div className="feed-name">
+                    <div className="profile-name">Nakiya<span className="profile-span">@Nakiya</span></div>
+                  </div>
+                  <div className="profile-fam">Family is all that matters. What did you do for thanksgiving. Drop a comment.</div>
+                  <div className="profile-hashtags">#family #bonding #thanksgiving</div>
+                </div>
+                <div className="reactns">
+                  <Image src={profileplus} alt="profile-img" className="profile-img" id="profileplus" />
+                  <div className="iconbtn">
+                    <IconButton onClick={handleLikeClick}>
+                      {liked ? (
+                        <Favorite sx={{ color: "red" }} />
+                      ) : (
+                        <FavoriteBorder className="favorite" />
+                      )}
+                    </IconButton>
+                    <div className="reaction-no">3.2k</div>
+                  </div>
+                  <div className="combtn">
+                    <Image src={comment} alt='comment' className="" />
+                    <div className="reaction-no">500</div>
+                  </div>
+                  <div className="combtn">
+                    <ShareIcon />
+                    <div className="reaction-no">285</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabPanel>
+        </Tabs>
+        <Box sx={{ pb: 7 }} >
+          <Paper
+            sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+            elevation={3}
+          >
+            <BottomNavigation sx={{ position: 'fixed', bottom: 0, width: 1.0 }} showLabels className="bot-navigate" style={{ background: "#1A1A27" }} id='bot-id'>
 
-          <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              This Feature is coming soon.
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
+              <BottomNavigationAction
+                onClick={navigateToAnotherPage}
+                icon={<VideoLibraryIcon />}
+                className="nav-action1"
+                style={{ color: "#264794" }}
+              />
 
-            <Button onClick={handleClose} autoFocus>
-              Okay
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
-      <></>
+
+              <BottomNavigationAction
+                onClick={handleClickOpen}
+                icon={<LibraryMusicIcon />}
+                className="nav-action1"
+                style={{ color: "#4C4F64" }}
+              />
+
+
+              <BottomNavigationAction
+                onClick={handleClickOpen}
+
+                icon={<MarkChatUnreadIcon />}
+                className="nav-action1"
+                style={{ color: "#4C4F64" }}
+              />
+
+
+              <BottomNavigationAction
+                onClick={handleClickOpenWhiteListform}
+                icon={<Person2Icon />}
+                className="nav-action1"
+                style={{ color: "#4C4F64" }}
+              />
+
+            </BottomNavigation>
+          </Paper>
+        </Box>
+        <div>
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                This Feature is coming soon.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+
+              <Button onClick={handleClose} autoFocus>
+                Okay
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </div>
+        <div>
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                This Feature is coming soon.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+
+              <Button onClick={handleClose} autoFocus>
+                Okay
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </div>
+        <></>
       </div>
     </div>
   );

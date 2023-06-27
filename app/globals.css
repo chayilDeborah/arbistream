@@ -263,10 +263,21 @@ line-height: 15px;
 
 
 /* Homepage */
+ .bigg-wrap {
+    display: flex;
+    justify-content: center;
+     background: rgb(26, 26, 39);
+  }
+  #section1 {
+    max-width: 1280px;
+    width: 100%;
+  }
 .wrapper {
   background: rgb(26, 26, 39);
   margin: -8px;
   padding: 0; 
+  max-width: 1280px;
+    width: 100%;
 }
 .nav-contain {
   max-width: 1280px;
@@ -315,7 +326,20 @@ width: 100%;
   width: 714px;
   color: #FFFFFF;
 }
-
+.rounded-boxes {
+  flex-direction: column;
+  width: 85%;
+  margin-top: -205px;
+padding-right: 4px;
+}
+.advert-group {
+  margin-left: 30%;
+}
+.playsvg {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .product-flex {
   display: flex;
   margin-right: 51px;
@@ -401,18 +425,29 @@ color: #FFFFFF;
   gap: 2em;
   margin-top: 5em;
 }
-.groupmic {
-  margin: 10% 0 0 11%;
+.explorcret {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
-.mobsvg {
-  display: none;
-}
-.mobmus {
-  display: none;
+.bar { 
+  margin-top: -27px;
 }
 
 .grpmusic {
   margin: 10% 0 0 -10%; 
+}
+.cropmus { 
+  
+}
+.three-box {
+  width: 85%;
+}
+.secure-group {
+  margin-top: 65px;
+  display: flex;
+}
+.phone-class {
+  margin-top: -295px;
 }
 .util {
   font-weight: 400;
@@ -425,6 +460,9 @@ color: #E0E0E0;
 }
 #util-id {
   width: 100%;
+}
+#util-id1 {
+  width: 80%;
 }
 .box {
   margin: 0;
@@ -657,8 +695,10 @@ display: none;
     width: 86px;
     height: 60px;
   }
+ 
   .wrapper {
     margin: 0;
+    
   }
   .container{
 flex-shrink: 0;
@@ -707,7 +747,9 @@ height: 26px;
 font-size: 35px;
 line-height: 120.3%;
   }
- 
+ #multi-id {
+width: 100%;
+ }
   .util {
     /* display: none; */
     margin-left: auto;

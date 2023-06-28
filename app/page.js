@@ -10,6 +10,7 @@ import phonemic from "./asset/phonemic.png";
 import smallplay from "./asset/smallplay.png";
 import playsvg from "./asset/playsvg.svg";
 import camera from "./asset/camera.svg";
+import bell from './asset/bell.svg'
 
 export default function Home() {
   const backgroundImageStyle = {
@@ -260,7 +261,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col lg:flex-row w-[76%] mt-[50px] justify-center lg:mt-[70px] bg-background-black text-white justify-evenly mx-auto">
-            <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[60px] items-center justify-center">
+            <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[30px] items-center justify-center">
               <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
                 <Image
                   src="/bots.svg"
@@ -274,7 +275,7 @@ export default function Home() {
                 Alpha Caller Bots
               </div>
             </div>
-            <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] items-center rounded-[24px] mb-[20px] justify-items-center">
+            <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] items-center rounded-[24px] mb-[30px] justify-items-center">
               <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
                 <Image
                   src="/mask.svg"
@@ -292,7 +293,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[20px] justify-center">
+            <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[100px] justify-center">
               <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
                 <Image
                   src="/wallet.svg"
@@ -310,15 +311,18 @@ export default function Home() {
           {/* end */}
 
           {/* section 5 */}
+          <div className="flex justify-end">
+              <Image src={bell} alt="image" className="w-[110px] lg:w-[185px] lg:-mb-[10%] -mb-[21%]" />
+            </div>
           <div className="flex-col text-white items-center mx-auto py-[25px] bg-[#4F1763] ">
-            <div className="text-white content-group mx-auto mb-[16px]">
+            <div className="text-white font-bold leading-[102.3%] text-center text-[28px] mx-auto mb-[16px]">
               Platform Features
             </div>
             <p className="text-white util mb-[50px]">
               Utilities and Well Though Out Features, Features Just for You
             </p>
           </div>
-          <div className="relative h-[534px] w-[461px] mt-[50px] mx-auto items-center">
+          <div className="relative h-[534px] w-[361px] lg:w-[461px] mt-[50px] mx-auto items-center">
             <Image
               src="/img2.svg"
               fill={true}

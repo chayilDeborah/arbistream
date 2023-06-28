@@ -60,12 +60,12 @@ export default function Home() {
           {/* section 2  */}
           <div className="mt-[50px]">
             <div
-              className="text-white text-[28px] w-[80%] leading-[118.3%] font-bold text-center w-[80%] mx-auto mb-[10px]"
+              className="text-white text-[28px] lg:text-[50px] lg:w-[68%] w-[80%] leading-[118.3%] font-bold text-center w-[80%] mx-auto mb-[10px]"
             >
               {" "}
               Watch and Engage with Your Favourite Content
             </div>
-            <p className="text-white util mb-[50px] w-[70%]">
+            <p className="text-white util mb-[50px] w-[70%] lg:w-[100%]">
               Earn Rewards For Engagements in Astrava Tokens
             </p>
             <div className="lg:flex justify-center">
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center bg-background-black text-white mx-auto -mt-[0]">
-            <div>
+            <div className="lg:w-[75%] lg:mt-[65px]">
               <div className="lg:flex justify-evenly">
                 <Image src={smallplay} alt="image" className="mt-[50px] w-[29px] lg:w-[105px]" />
                 <div className="flex flex-col justify-center align-center bg-[#8F2C91] h-[168.98px] w-[207px] rounded-[24px] mb-[30px] justify-center">
@@ -205,8 +205,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="lg:flex justify-evenly ml-[0%] lg:ml-[30%]">
-                <div className="flex flex-col bg-[#26889E] h-[168.98px] w-[207px] rounded-[24px] mb-[30px] justify-center">
+              <div className="lg:flex ml-[0%] lg:ml-[35%]">
+                <div className="flex flex-col bg-[#26889E] h-[168.98px] w-[207px] rounded-[24px] mb-[30px] justify-center lg:mr-[7%]">
                   <div className="relative h-[60px] w-[60px]  mx-auto items-center">
                     <Image
                       src="/adverts.svg"
@@ -245,22 +245,21 @@ export default function Home() {
           {/* section 4  */}
           <Image src={playsvg} alt="image" className="playsvg" />
           <Image src={camera} alt="image" />
-          <div className="secure-group">
+          <div className="flex justify-center">
             <div>
               <div
-                className="text-white content-group mx-auto mb-[50px]"
-                id="util-id"
+                className="text-white text-[28px] lg:text-[50px] lg:-mt-[-15%] font-extrabold w-[342px] lg:w-[71%] leading-[120.3%] mx-auto mb-[10px] lg:mb-[10px] text-center"
               >
                 {" "}
                 Secure and Transparent Way To Trade Digital Assets
               </div>
-              <p className="text-white util mb-[10px]" id="util-id">
+              <p className="text-white mb-[10px] w-[234px] lg:w-[100%] font-normal text-[16px] lg:text-[24px] leading-[20px] lg:leading-[33px] m-auto text-center">
                 Trade Easily, No Hidden Charges, Community Driven
               </p>
             </div>
           </div>
 
-          <div className="flex mt-[75px] bg-background-black text-white justify-evenly mx-auto three-box">
+          <div className="flex flex-col lg:flex-row w-[76%] mt-[50px] justify-center lg:mt-[70px] bg-background-black text-white justify-evenly mx-auto">
             <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[60px] items-center justify-center">
               <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
                 <Image

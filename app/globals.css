@@ -436,9 +436,9 @@ color: #FFFFFF;
 .grpmusic {
   margin: 10% 0 0 -10%; 
 }
-.cropmus { 
+/* .cropmus { 
   
-}
+} */
 .three-box {
   width: 85%;
 }
@@ -791,9 +791,9 @@ min-width: 100vw;
     margin-top: 2%;
     margin: 0;
   }
-  .footer-body {
-   /* flex-direction: column;  */
-  }
+  /* .footer-body {
+   flex-direction: column; 
+  } */
   .whitelogo {
     width: 92px;
 height: 26px;
@@ -808,9 +808,9 @@ margin: 32px 0 0 0;
     flex-direction: column;
     margin: 38px 0 0 50px;
   }
-  .product-grp {
-    /* flex-direction: column; */
-  }
+  /* .product-grp {
+    flex-direction: column;
+  } */
  
   .product-footer {
     font-size: 16px;
@@ -835,9 +835,9 @@ margin-bottom: 6px;
     /* display: none; */
   margin: 35px 0 35px 0px;
   }
-  .social-icons {
-    /* display: block; */
-  }
+  /* .social-icons {
+    display: block;
+  } */
   .soc-icons {
     width: 22.55px;
 height: 22.55px;

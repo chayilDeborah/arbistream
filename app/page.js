@@ -76,7 +76,7 @@ export default function Home() {
         <div className="mt-[60px]">
           <div className="text-white content-group mx-auto mb-[50px]" id="watch-id"> Watch and Engage with Your Favourite Content</div>
           <p className="text-white util mb-[50px]" id="util-id">Earn Rewards For Engagements in Astrava Tokens</p>
-          <div className="flex justify-center">
+          <div className="lg:flex justify-center sm:mt-[20px] md:grid md">
             <div className="flex overflow-scroll ml-5 mt-[50px] scrollbar-hide no-scrollbar w-full max-w-7xl">
               <div className="relative h-96 min-w-[300px]">
                 <Image
@@ -277,7 +277,7 @@ export default function Home() {
         {/* end */}
 
         {/* section 5 */}
-        <div className="flex-col text-white items-center mx-auto mt-[65px] py-[25px] bg-[#4F1763] ">
+        <div className="flex-col text-white items-center mx-auto py-[25px] bg-[#4F1763] ">
           <div className="text-white content-group mx-auto mb-[16px]">Platform Features</div>
           <p className="text-white util mb-[50px]">Utilities and Well Though Out Features, Features Just for You</p>
         </div>

@@ -147,7 +147,7 @@ export default function Home() {
 
         {/* section 3 */}
         <div className="flex-col text-white items-center mx-auto mt-[200px] pt-[42px] pb-[49px] bg-[#4F1763]">
-          <div className="text-white content-group mx-auto mb-[16px] z-10" id="util-id">Multiple Monitization Options</div>
+          <div className="text-white content-group mx-auto mb-[16px] z-10" id="util-id">Multiple Monetization Options</div>
           <p className="text-white util mb-[50px]" id="util-id">Monitize Your content In Multiple Ways as a Creator</p>
         </div>
         <div className="flex justify-end phone-class">

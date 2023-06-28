@@ -10,7 +10,13 @@ import phonemic from "./asset/phonemic.png";
 import smallplay from "./asset/smallplay.png";
 import playsvg from "./asset/playsvg.svg";
 import camera from "./asset/camera.svg";
-import bell from './asset/bell.svg'
+import bell from './asset/bell.svg';
+import forward from './asset/forward.svg';
+import mic from './asset/mic.png';
+import img2 from './asset/img2.svg';
+import desktopimg from './asset/desktopimg.png';
+import bars2 from './asset/bars2.svg';
+import forwarded from './asset/forwarded.svg'
 
 export default function Home() {
   const backgroundImageStyle = {
@@ -249,7 +255,7 @@ export default function Home() {
           <div className="flex justify-center">
             <div>
               <div
-                className="text-white text-[28px] lg:text-[50px] lg:-mt-[-15%] font-extrabold w-[342px] lg:w-[71%] leading-[120.3%] mx-auto mb-[10px] lg:mb-[10px] text-center"
+                className="text-white text-[28px] lg:text-[50px] lg:-mt-[15%] font-extrabold w-[342px] lg:w-[71%] leading-[120.3%] mx-auto mb-[10px] lg:mb-[10px] text-center"
               >
                 {" "}
                 Secure and Transparent Way To Trade Digital Assets
@@ -322,28 +328,28 @@ export default function Home() {
               Utilities and Well Though Out Features, Features Just for You
             </p>
           </div>
-          <div className="relative h-[534px] w-[361px] lg:w-[461px] mt-[50px] mx-auto items-center">
+          <div className="flex justify-center relative w-[100%] mt-[50px] mx-auto items-center">
+            <Image src={desktopimg} alt="image" className="hidden lg:block" />
             <Image
-              src="/img2.svg"
-              fill={true}
+              src={img2}
+              // fill={true}
               alt="Image"
-              style={{ objectFit: "fit" }}
-              className=""
+              // style={{ objectFit: "fit" }}
+              className="block lg:hidden "
             />
           </div>
           {/* end */}
 
           {/* section 6 */}
-          <div className="relative h-[55px] w-[41px] mt-[200px] mx-auto items-center">
+          <div className="flex mt-[60px] mx-auto items-center">
+          <Image src={forward} alt="image" className="mr-[52px]" />
             <Image
-              src="/mic.png"
-              fill={true}
+              src={mic}
               alt="Image"
-              style={{ objectFit: "fit" }}
-              className=""
+              className="lg:w-[89px] lg:h-[121px] lg:-mt-[15%]"
             />
           </div>
-          <div className="my-[30px]">
+          <div className="mt-[-27px] lg:-mt-[14%] mb-[41px]">
             <div className="text-white content-group mx-auto mb-[20px]">
               Our Partners
             </div>
@@ -351,7 +357,8 @@ export default function Home() {
               We are building the Ecosystem with the help of these Great Teams
             </p>
           </div>
-          <div className="grid grid-cols-3 items-center justify-items-center space-y-5 h-[243px] bg-gray-400">
+          <div className="flex justify-center bg-gray-400 pb-[20px] lg:bg-white mb-[80px]">
+          <div className="grid grid-cols-2 items-center justify-items-center  h-[243px] w-[100%] lg:w-[60%] lg:mt-[30px] lg:mb-[30px]">
             <div className="relative w-[129px] h-[38px]">
               <Image
                 src="/unipass1.svg"
@@ -370,7 +377,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <div className="relative w-[129px] h-[38px]">
+            <div className="relative w-[129px] h-[38px] ml-[0] lg:ml-[76%]">
               <Image
                 src="/dexview.svg"
                 fill={true}
@@ -379,7 +386,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <div className="relative w-[129px] h-[38px]">
+            <div className="relative w-[129px] h-[38px] ml-[0] lg:ml-[76%]">
               <Image
                 src="/arbitrum2.svg"
                 fill={true}
@@ -397,7 +404,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <div className="relative w-[129px] h-[38px] ">
+            <div className="relative w-[129px] h-[38px] mb-[20px]">
               <Image
                 src="/unipass2.svg"
                 fill={true}
@@ -407,10 +414,15 @@ export default function Home() {
               />
             </div>
           </div>
+          </div>
           {/* end */}
 
           {/* section 7 */}
-          <div className="flex-col text-white items-center mx-auto mt-[200px] py-[25px] bg-[#4F1763] ">
+          <div className="flex justify-end">
+            <Image src={forwarded} alt="image" className="-mb-[29%] lg:-mb-[8%] lg:mr-[40%] w-[155px]" />
+            <Image src={bars2} alt='image' className='-mb-[16%] lg:-mb-[5%]'/>
+          </div>
+          <div className="flex-col text-white items-center mx-auto mt-[00px] pt-[35px] pb-[61px] mb-[80px] bg-[#4F1763] ">
             <div className="text-white content-group mx-auto mb-[16px]">
               Our RoadMap
             </div>
@@ -418,9 +430,9 @@ export default function Home() {
               Anticipate Our Plans & RoadMap
             </p>
 
-            <div className="space-y-5 mt-10 ">
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative ml-14 mr-2 h-[38px] w-[40px] justify-evenly items-center">
+            <div className="space-y-5 mt-[40px] ">
+              <div className="flex rounded-lg h-[74px] max-w-[248px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative ml-[17px] mr-[10px] h-[38px] w-[40px] justify-evenly items-center">
                   <Image
                     src="/vector.png"
                     fill={true}
@@ -429,13 +441,13 @@ export default function Home() {
                     className=""
                   />
                 </div>
-                <p className="text-lg right-3 font-semibold">
+                <p className="text-[16px] right-3 font-bold">
                   Platform Development Commencement
                 </p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[168px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/vector2.png"
                     fill={true}
@@ -444,11 +456,11 @@ export default function Home() {
                     className=""
                   />
                 </div>
-                <p className="text-lg font-semibold">Community Building</p>
+                <p className="text-lg font-bold">Community Building</p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[164px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/awareness.png"
                     fill={true}
@@ -460,8 +472,8 @@ export default function Home() {
                 <p className="text-lg font-semibold">Awareness Creation</p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[190px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/vested.png"
                     fill={true}
@@ -470,11 +482,11 @@ export default function Home() {
                     className=""
                   />
                 </div>
-                <p className="text-lg font-semibold">Vested private Sale</p>
+                <p className="text-lg font-bold">Vested private Sale</p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[187px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/presale.png"
                     fill={true}
@@ -486,8 +498,8 @@ export default function Home() {
                 <p className="text-lg font-semibold">Public Presale</p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[203px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/launch.png"
                     fill={true}
@@ -499,8 +511,8 @@ export default function Home() {
                 <p className="text-lg font-semibold">Platform Launch</p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[171px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/creators.png"
                     fill={true}
@@ -512,8 +524,8 @@ export default function Home() {
                 <p className="text-lg font-semibold">Creators Onboarding</p>
               </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[350px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-2 justify-evenly items-center">
+              <div className="flex rounded-lg h-[74px] max-w-[187px] mx-auto items-center justify-center outline outline-4 outline-white">
+                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
                   <Image
                     src="/airdrop.png"
                     fill={true}

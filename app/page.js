@@ -10,13 +10,15 @@ import phonemic from "./asset/phonemic.png";
 import smallplay from "./asset/smallplay.png";
 import playsvg from "./asset/playsvg.svg";
 import camera from "./asset/camera.svg";
-import bell from './asset/bell.svg';
-import forward from './asset/forward.svg';
-import mic from './asset/mic.png';
-import img2 from './asset/img2.svg';
-import desktopimg from './asset/desktopimg.png';
-import bars2 from './asset/bars2.svg';
-import forwarded from './asset/forwarded.svg'
+import bell from "./asset/bell.svg";
+import forward from "./asset/forward.svg";
+import mic from "./asset/mic.png";
+import img2 from "./asset/img2.svg";
+import desktopimg from "./asset/desktopimg.png";
+import bars2 from "./asset/bars2.svg";
+import forwarded from "./asset/forwarded.svg";
+import imgboy from "./asset/imgboy.png";
+import imgirl from "./asset/imgirl.png";
 
 export default function Home() {
   const backgroundImageStyle = {
@@ -66,9 +68,7 @@ export default function Home() {
 
           {/* section 2  */}
           <div className="mt-[50px]">
-            <div
-              className="text-white text-[28px] lg:text-[50px] lg:w-[68%] w-[80%] leading-[118.3%] font-bold text-center w-[80%] mx-auto mb-[10px]"
-            >
+            <div className="text-white text-[28px] lg:text-[50px] lg:w-[68%] w-[80%] leading-[118.3%] font-bold text-center w-[80%] mx-auto mb-[10px]">
               {" "}
               Watch and Engage with Your Favourite Content
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
                 </div>
                 <div className="relative h-96 min-w-[300px]">
                   <Image
-                    src="/img1.svg"
+                    src={imgboy}
                     fill={true}
                     alt="Image"
                     style={{ objectFit: "cover" }}
@@ -97,7 +97,7 @@ export default function Home() {
                 </div>
                 <div className="relative h-96 min-w-[300px]">
                   <Image
-                    src="/img1.svg"
+                    src={imgirl}
                     fill={true}
                     alt="Image"
                     style={{ objectFit: "cover" }}
@@ -168,7 +168,11 @@ export default function Home() {
           <div className="flex justify-center bg-background-black text-white mx-auto -mt-[0]">
             <div className="lg:w-[75%] lg:mt-[65px]">
               <div className="lg:flex justify-evenly">
-                <Image src={smallplay} alt="image" className="mt-[50px] w-[29px] lg:w-[105px]" />
+                <Image
+                  src={smallplay}
+                  alt="image"
+                  className="mt-[50px] w-[29px] lg:w-[105px]"
+                />
                 <div className="flex flex-col justify-center align-center bg-[#8F2C91] h-[168.98px] w-[207px] rounded-[24px] mb-[30px] justify-center">
                   <div className="relative h-[60px] w-[60px]  mx-auto items-center">
                     <Image
@@ -227,7 +231,7 @@ export default function Home() {
                     Adverts placement
                   </div>
                 </div>
-                <div className="flex flex-col bg-[#1C71A1] h-[168.98px] w-[207px] rounded-[24px] mb-[30px] justify-center">
+                <div className="flex flex-col bg-[#1C71A1] h-[168.98px] w-[207px] rounded-[24px] mb-[70px] justify-center">
                   <div className="relative h-[60px] w-[60px] mx-auto items-center">
                     <Image
                       src="/streaming.svg"
@@ -250,13 +254,15 @@ export default function Home() {
           {/* end */}
 
           {/* section 4  */}
-          <Image src={playsvg} alt="image" className="playsvg" />
-          <Image src={camera} alt="image" />
+          <Image
+            src={playsvg}
+            alt="image"
+            className="playsvg w-[35px] lg:w-[99px] -mt-[38%]"
+          />
+          <Image src={camera} alt="image" className="w-[127px] lg:w-[448px]" />
           <div className="flex justify-center">
             <div>
-              <div
-                className="text-white text-[28px] lg:text-[50px] lg:-mt-[15%] font-extrabold w-[342px] lg:w-[71%] leading-[120.3%] mx-auto mb-[10px] lg:mb-[10px] text-center"
-              >
+              <div className="text-white text-[28px] lg:text-[50px] -mt-[10%] lg:-mt-[15%] font-extrabold w-[342px] lg:w-[71%] leading-[120.3%] mx-auto mb-[10px] lg:mb-[10px] text-center">
                 {" "}
                 Secure and Transparent Way To Trade Digital Assets
               </div>
@@ -318,8 +324,12 @@ export default function Home() {
 
           {/* section 5 */}
           <div className="flex justify-end">
-              <Image src={bell} alt="image" className="w-[110px] lg:w-[185px] lg:-mb-[10%] -mb-[21%]" />
-            </div>
+            <Image
+              src={bell}
+              alt="image"
+              className="w-[110px] lg:w-[185px] lg:-mb-[10%] -mb-[21%]"
+            />
+          </div>
           <div className="flex-col text-white items-center mx-auto py-[25px] bg-[#4F1763] ">
             <div className="text-white font-bold leading-[102.3%] text-center text-[28px] mx-auto mb-[16px]">
               Platform Features
@@ -342,11 +352,11 @@ export default function Home() {
 
           {/* section 6 */}
           <div className="flex mt-[60px] mx-auto items-center">
-          <Image src={forward} alt="image" className="mr-[52px]" />
+            <Image src={forward} alt="image" className="w-[145px] mr-[52px]" />
             <Image
               src={mic}
               alt="Image"
-              className="lg:w-[89px] lg:h-[121px] lg:-mt-[15%]"
+              className=" lg:w-[89px] lg:h-[121px] lg:-mt-[15%]"
             />
           </div>
           <div className="mt-[-27px] lg:-mt-[14%] mb-[41px]">
@@ -358,69 +368,73 @@ export default function Home() {
             </p>
           </div>
           <div className="flex justify-center bg-gray-400 pb-[20px] lg:bg-white mb-[80px]">
-          <div className="grid grid-cols-2 items-center justify-items-center  h-[243px] w-[100%] lg:w-[60%] lg:mt-[30px] lg:mb-[30px]">
-            <div className="relative w-[129px] h-[38px]">
-              <Image
-                src="/unipass1.svg"
-                fill={true}
-                alt="Image"
-                style={{ objectFit: "fit" }}
-                className=""
-              />
+            <div className="grid grid-cols-2 items-center justify-items-center  h-[243px] w-[100%] lg:w-[60%] lg:mt-[30px] lg:mb-[30px]">
+              <div className="relative w-[129px] h-[38px]">
+                <Image
+                  src="/unipass1.svg"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
+                />
+              </div>
+              <div className="relative w-[129px] h-[38px] ">
+                <Image
+                  src="/pinksale2.svg"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
+                />
+              </div>
+              <div className="relative w-[129px] h-[38px] ml-[0] lg:ml-[76%]">
+                <Image
+                  src="/dexview.svg"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
+                />
+              </div>
+              <div className="relative w-[129px] h-[38px] ml-[0] lg:ml-[76%]">
+                <Image
+                  src="/arbitrum2.svg"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
+                />
+              </div>
+              <div className="relative w-[129px] h-[38px] ">
+                <Image
+                  src="/arbitrum2.svg"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
+                />
+              </div>
+              <div className="relative w-[129px] h-[38px] mb-[20px]">
+                <Image
+                  src="/unipass2.svg"
+                  fill={true}
+                  alt="Image"
+                  style={{ objectFit: "fit" }}
+                  className=""
+                />
+              </div>
             </div>
-            <div className="relative w-[129px] h-[38px] ">
-              <Image
-                src="/pinksale2.svg"
-                fill={true}
-                alt="Image"
-                style={{ objectFit: "fit" }}
-                className=""
-              />
-            </div>
-            <div className="relative w-[129px] h-[38px] ml-[0] lg:ml-[76%]">
-              <Image
-                src="/dexview.svg"
-                fill={true}
-                alt="Image"
-                style={{ objectFit: "fit" }}
-                className=""
-              />
-            </div>
-            <div className="relative w-[129px] h-[38px] ml-[0] lg:ml-[76%]">
-              <Image
-                src="/arbitrum2.svg"
-                fill={true}
-                alt="Image"
-                style={{ objectFit: "fit" }}
-                className=""
-              />
-            </div>
-            <div className="relative w-[129px] h-[38px] ">
-              <Image
-                src="/arbitrum2.svg"
-                fill={true}
-                alt="Image"
-                style={{ objectFit: "fit" }}
-                className=""
-              />
-            </div>
-            <div className="relative w-[129px] h-[38px] mb-[20px]">
-              <Image
-                src="/unipass2.svg"
-                fill={true}
-                alt="Image"
-                style={{ objectFit: "fit" }}
-                className=""
-              />
-            </div>
-          </div>
           </div>
           {/* end */}
 
           {/* section 7 */}
           <div className="flex justify-end">
-            <Image src={forwarded} alt="image" className="-mb-[29%] lg:-mb-[8%] lg:mr-[40%] w-[155px]" />
-            <Image src={bars2} alt='image' className='-mb-[16%] lg:-mb-[5%]'/>
+            <Image
+              src={forwarded}
+              alt="image"
+              className="-mb-[29%] lg:-mb-[8%] lg:mr-[40%] w-[100px]"
+            />
+            <Image src={bars2} alt="image" className="-mb-[16%] lg:-mb-[5%]" />
           </div>
           <div className="flex-col text-white items-center mx-auto mt-[00px] pt-[35px] pb-[61px] mb-[80px] bg-[#4F1763] ">
             <div className="text-white content-group mx-auto mb-[16px]">
@@ -430,111 +444,112 @@ export default function Home() {
               Anticipate Our Plans & RoadMap
             </p>
 
-            <div className="space-y-5 mt-[40px] ">
-              <div className="flex rounded-lg h-[74px] max-w-[248px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative ml-[17px] mr-[10px] h-[38px] w-[40px] justify-evenly items-center">
-                  <Image
-                    src="/vector.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+            <div className="space-y-5 mt-[40px] mx-auto">
+              <div className="block lg:flex space-y-5">
+                <div className="flex rounded-lg h-[74px] max-w-[248px] lg:max-w-[362px] mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative ml-[17px] mr-[10px] h-[38px] w-[40px] justify-evenly items-center">
+                    <Image
+                      src="/vector.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-[16px] right-3 font-bold lg:text-[24px]">
+                    Platform Development Commencement
+                  </p>
                 </div>
-                <p className="text-[16px] right-3 font-bold">
-                  Platform Development Commencement
-                </p>
-              </div>
+                <div className="flex rounded-lg h-[74px] max-w-[168px] lg:max-w-[243px] mx-auto lg:mx-[0]  items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/vector2.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-bold lg:text-[24px]">Community Building</p>
+                </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[168px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/vector2.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+                <div className="flex rounded-lg h-[74px] max-w-[164px] lg:max-w-[237px] mx-auto lg:mx-[0] items-center  lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/awareness.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-semibold lg:text-[24px]">Awareness Creation</p>
                 </div>
-                <p className="text-lg font-bold">Community Building</p>
-              </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[164px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/awareness.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+                <div className="flex rounded-lg h-[74px] max-w-[190px] max-w-[248px] mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/vested.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-bold">Vested private Sale</p>
                 </div>
-                <p className="text-lg font-semibold">Awareness Creation</p>
               </div>
-
-              <div className="flex rounded-lg h-[74px] max-w-[190px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative ml-[17px] h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/vested.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+              <div className="block lg:flex space-y-5 lg:space-y-0">
+                <div className="flex rounded-lg h-[74px] max-w-[187px] lg:max-w-[241px] mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/presale.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-semibold lg:text-[24px]">Public Presale</p>
                 </div>
-                <p className="text-lg font-bold">Vested private Sale</p>
-              </div>
-
-              <div className="flex rounded-lg h-[74px] max-w-[187px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/presale.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+                <div className="flex rounded-lg h-[74px] max-w-[203px] lg:max-w-[297px] mx-auto lg:mx-[0]  items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/launch.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-semibold lg:text-[24px]">Platform Launch</p>
                 </div>
-                <p className="text-lg font-semibold">Public Presale</p>
-              </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[203px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/launch.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+                <div className="flex rounded-lg h-[74px] max-w-[171px] lg:max-w-[247px] mx-auto lg:mx-[0]  items-center  lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/creators.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-semibold lg:text-[24px]">Creators Onboarding</p>
                 </div>
-                <p className="text-lg font-semibold">Platform Launch</p>
-              </div>
 
-              <div className="flex rounded-lg h-[74px] max-w-[171px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/creators.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
+                <div className="flex rounded-lg h-[74px] max-w-[187px] lg:max-w-[271px]  mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                    <Image
+                      src="/airdrop.png"
+                      fill={true}
+                      alt="Image"
+                      style={{ objectFit: "fit" }}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-lg font-semibold lg:text-[24px]">Token Airdrop</p>
                 </div>
-                <p className="text-lg font-semibold">Creators Onboarding</p>
-              </div>
-
-              <div className="flex rounded-lg h-[74px] max-w-[187px] mx-auto items-center justify-center outline outline-4 outline-white">
-                <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
-                  <Image
-                    src="/airdrop.png"
-                    fill={true}
-                    alt="Image"
-                    style={{ objectFit: "fit" }}
-                    className=""
-                  />
-                </div>
-                <p className="text-lg font-semibold">Token Airdrop</p>
               </div>
             </div>
           </div>

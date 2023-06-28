@@ -257,7 +257,7 @@ export default function Home() {
           <Image
             src={playsvg}
             alt="image"
-            className="playsvg w-[35px] lg:w-[99px] -mt-[38%]"
+            className="playsvg w-[35px] lg:w-[99px] -mt-[38%] -mb-[27%] lg:-mb-[0%]"
           />
           <Image src={camera} alt="image" className="w-[127px] lg:w-[448px]" />
           <div className="flex justify-center">

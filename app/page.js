@@ -443,10 +443,9 @@ export default function Home() {
             <p className="text-white util mb-[50px]">
               Anticipate Our Plans & RoadMap
             </p>
-
-            <div className="space-y-5 mt-[40px] mx-auto">
-              <div className="block lg:flex space-y-5">
-                <div className="flex rounded-lg h-[74px] max-w-[248px] lg:max-w-[362px] mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
+            <div className="space-y-5 lg:w-[90%] mx-auto mt-[20px] lg:mt-[0px]">
+              <div className="block lg:flex space-y-5 lg:space-y-0">
+                <div className="flex rounded-lg h-[74px] max-w-[248px] lg:max-w-[328px] mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
                   <div className="relative ml-[17px] mr-[10px] h-[38px] w-[40px] justify-evenly items-center">
                     <Image
                       src="/vector.png"
@@ -496,12 +495,12 @@ export default function Home() {
                       className=""
                     />
                   </div>
-                  <p className="text-lg font-bold">Vested private Sale</p>
+                  <p className="text-lg font-bold lg:text-[24px]">Vested private Sale</p>
                 </div>
               </div>
-              <div className="block lg:flex space-y-5 lg:space-y-0">
+              <div className="block lg:flex space-y-5 lg:space-y-0 mt-[40px]">
                 <div className="flex rounded-lg h-[74px] max-w-[187px] lg:max-w-[241px] mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
-                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                  <div className="relative h-[38px] w-[40px] ml-[17px] mr-[10px] justify-evenly items-center">
                     <Image
                       src="/presale.png"
                       fill={true}
@@ -510,10 +509,10 @@ export default function Home() {
                       className=""
                     />
                   </div>
-                  <p className="text-lg font-semibold lg:text-[24px]">Public Presale</p>
+                  <p className="text-lg font-semibold lg:text-[24px] mr-[17px]">Public Presale</p>
                 </div>
                 <div className="flex rounded-lg h-[74px] max-w-[203px] lg:max-w-[297px] mx-auto lg:mx-[0]  items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
-                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                  <div className="relative h-[38px] w-[40px] ml-[17px] mr-[10px] justify-evenly items-center">
                     <Image
                       src="/launch.png"
                       fill={true}
@@ -522,11 +521,11 @@ export default function Home() {
                       className=""
                     />
                   </div>
-                  <p className="text-lg font-semibold lg:text-[24px]">Platform Launch</p>
+                  <p className="text-lg font-semibold lg:text-[24px] mr-[17px]">Platform Launch</p>
                 </div>
 
                 <div className="flex rounded-lg h-[74px] max-w-[171px] lg:max-w-[247px] mx-auto lg:mx-[0]  items-center  lg:mr-[30px] justify-center outline outline-4 outline-white">
-                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                  <div className="relative h-[38px] w-[40px] ml-[17px] mr-[10px] justify-evenly items-center">
                     <Image
                       src="/creators.png"
                       fill={true}
@@ -535,11 +534,11 @@ export default function Home() {
                       className=""
                     />
                   </div>
-                  <p className="text-lg font-semibold lg:text-[24px]">Creators Onboarding</p>
+                  <p className="text-lg font-semibold lg:text-[24px] mr-[17px]">Creators Onboarding</p>
                 </div>
 
                 <div className="flex rounded-lg h-[74px] max-w-[187px] lg:max-w-[271px]  mx-auto lg:mx-[0] items-center lg:mr-[30px] justify-center outline outline-4 outline-white">
-                  <div className="relative h-[38px] w-[40px] mr-[10px] justify-evenly items-center">
+                  <div className="relative h-[38px] w-[40px] ml-[17px] mr-[10px] justify-evenly items-center">
                     <Image
                       src="/airdrop.png"
                       fill={true}
@@ -548,7 +547,7 @@ export default function Home() {
                       className=""
                     />
                   </div>
-                  <p className="text-lg font-semibold lg:text-[24px]">Token Airdrop</p>
+                  <p className="text-lg font-semibold lg:text-[24px] mr-[17px]">Token Airdrop</p>
                 </div>
               </div>
             </div>

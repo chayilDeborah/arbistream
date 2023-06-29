@@ -7,14 +7,12 @@ import mic from "../asset/mic.png";
 const Partners = () => {
   return (
     <>
-    <div className="lg:flex lg:justify-center">
-    <div className="lg:w-[1280px] lg:mt-[60px]">
-      <div className="flex mt-[60px] mx-auto items-center">
-        <Image src={forward} alt="image" className="w-[145px] mr-[52px]" />
+      <div className="flex mt-[60px] lg:mt-[12%] mx-auto items-center 2xl:mt-[6%]">
+        <Image src={forward} alt="image" className="w-[145px] mr-[52px] lg:w-[483px] 2xl:mb-[3%]" />
         <Image
           src={mic}
           alt="Image"
-          className=" lg:w-[89px] lg:h-[121px] lg:-mt-[15%]"
+          className=" lg:w-[89px] lg:h-[121px] lg:-mt-[15%] lg:ml-[10%] lg:-mb-[4%] 2xl:ml-[24%]"
         />
       </div>
       <div className="mt-[-27px] lg:-mt-[14%] mb-[41px]">
@@ -25,11 +23,7 @@ const Partners = () => {
           We are building the Ecosystem with the help of these Great Teams
         </p>
       </div>
-      </div>
-      </div>
-      <div  className="lg:flex lg:justify-center bg-gray-400 lg:bg-white">
-        <div  className="lg:w-[1280px]">
-      <div className="flex justify-center  pb-[20px]  mb-[80px]">
+      <div className="flex justify-center bg-gray-400 pb-[20px] lg:bg-white mb-[80px]">
         <div className="grid grid-cols-2 items-center justify-items-center  h-[243px] w-[100%] lg:w-[60%] lg:mt-[30px] lg:mb-[30px]">
           <div className="relative w-[129px] h-[38px]">
             <Image
@@ -87,9 +81,6 @@ const Partners = () => {
           </div>
         </div>
       </div>
-      </div>
-      </div>
-      
     </>
   );
 };

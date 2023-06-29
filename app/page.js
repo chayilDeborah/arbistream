@@ -157,9 +157,13 @@ export default function Home() {
       <Image
         src={playsvg}
         alt="image"
-        className="playsvg w-[35px] lg:w-[99px] -mt-[38%] -mb-[27%] lg:-mb-[35%]"
+        className="playsvg w-[35px] lg:w-[99px] lg:mt-[10%] -mt-[38%] lg:-mb-[9%] -mb-[27%] lg:-mb-[35%]"
       />
+      <div className="lg:flex lg:justify-center lg:mt-[6%]">
+      <div className="lg:flex lg:justify-left lg:w-[1280px] lg:-mt-[5%] lg:mb-[1%]">
       <Image src={camera} alt="image" className="w-[127px] lg:w-[448px]" />
+      </div>
+      </div>
       <div className="flex justify-center">
         <div className="lg:w-[1280px]">
           <div className="text-white text-[28px] lg:text-[50px] -mt-[10%] lg:-mt-[15%] font-extrabold w-[342px] lg:w-[71%] leading-[120.3%] mx-auto mb-[10px] lg:mb-[10px] text-center">
@@ -172,7 +176,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-[76%] mt-[50px] justify-center lg:mt-[70px] bg-background-black text-white justify-evenly mx-auto">
+      <div className="flex flex-col lg:flex-row w-[76%] mt-[50px] justify-center lg:mt-[70px] bg-background-black text-white justify-evenly mx-auto lg:max-w-[1280px]">
         <div className="flex-col bg-[#26569E] h-[168.98px] w-[285px] rounded-[24px] mb-[30px] items-center justify-center">
           <div className="relative h-[60px] w-[60px] mt-[30px] mx-auto items-center">
             <Image

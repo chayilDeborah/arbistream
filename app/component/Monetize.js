@@ -20,12 +20,12 @@ const Monetize = () => {
             Multiple Monetization Options
           </div>
           <p className="text-white util mb-[50px] leading-[0]">
-            Monitize Your content In Multiple Ways as a Creator
+            Monetize Your content In Multiple Ways as a Creator
           </p>
         </div>
       </div>
       <div className="flex justify-center bg-background-black text-white mx-auto -mt-[0]">
-        <div className="lg:w-[75%] lg:mt-[65px]">
+        <div className="lg:w-[75%] lg:mt-[65px] lg:max-w-[1280px]">
           <div className="lg:flex justify-evenly">
             <Image
               src={smallplay}

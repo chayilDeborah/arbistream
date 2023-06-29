@@ -2,20 +2,27 @@ import Image from "next/image";
 import phonemic from "../asset/phonemic.png";
 import smallplay from "../asset/smallplay.png";
 
-
 const Monetize = () => {
   return (
     <>
-      <div className="flex justify-end">
-        <Image src={phonemic} alt="svg" className="w-[137.932px] -mb-[68px]" />
-      </div>
-      <div className="flex-col text-white items-center mx-auto mt-[0] pt-[42px] pb-[49px] bg-[#4F1763]">
-        <div className="text-white content-group mx-auto mb-[16px] z-10 w-[93%] lg:w-[100%]">
-          Multiple Monetization Options
+      <div className="lg:flex lg:justify-center">
+        <div className="flex justify-end lg:w-[1280px]">
+          <Image
+            src={phonemic}
+            alt="svg"
+            className="w-[137.932px] -mb-[68px]"
+          />
         </div>
-        <p className="text-white util mb-[50px] leading-[0]">
-          Monitize Your content In Multiple Ways as a Creator
-        </p>
+      </div>
+      <div className="lg:flex justify-center flex-col text-white items-center mx-auto mt-[0] pt-[42px] pb-[49px] bg-[#4F1763]">
+        <div className="lg:w-[1280px]">
+          <div className="text-white content-group mx-auto mb-[16px] z-10 w-[93%] lg:w-[100%]">
+            Multiple Monetization Options
+          </div>
+          <p className="text-white util mb-[50px] leading-[0]">
+            Monitize Your content In Multiple Ways as a Creator
+          </p>
+        </div>
       </div>
       <div className="flex justify-center bg-background-black text-white mx-auto -mt-[0]">
         <div className="lg:w-[75%] lg:mt-[65px]">
